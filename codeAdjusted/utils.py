@@ -47,10 +47,7 @@ def drawPoints(img, points):
 
 def getHistogram(img,display=False,minPer = 0.1,region= 1):
     h, w = img.shape[:2]
-    if region == 1:
-        histValues = np.sum(img, axis=0)
-    else:
-        histValues = np.sum(img[-h//region:,:], axis=0)
+    histValues = np.sum(img[-h//region:,:], axis=0)
 
     maxValue = np.max(histValues)  # FIND THE MAX VALUE
     minValue = minPer*maxValue
@@ -84,7 +81,7 @@ def imageMatrix(scale, imgArray):
 
     for x in range(0, rows):
         for y in range(0, cols):
-            imgArray[x][y] = cv2.resize(imgArray[x][y], (wImg, hImg), None, scale, scale)
+            imgArray[x][y] = cv2.resize(imgArray[x][y], (int(wImg*scale), int(hImg*scale)), None)
             if len(imgArray[x][y].shape) == 2: imgArray[x][y]= cv2.cvtColor(imgArray[x][y], cv2.COLOR_GRAY2BGR)
 
     imageBlank = np.zeros((hImg, wImg, 3), np.uint8)
