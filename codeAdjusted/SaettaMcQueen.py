@@ -1,6 +1,5 @@
 from MotorModule import Motor
 from RoadModule import getLaneCurve
-import numpy as np
 import cv2
  
 ##################################################
@@ -13,13 +12,13 @@ def main():
     ritorno = trip()
 
 def trip():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("../data/testReflex.avi")
     #initalTrackbarVals = [56, 131, 0, 240]
     #utils.initializeTrackbars(initalTrackbarVals)
     while cap.isOpened():
         ret, img = cap.read()
         if ret == True:
-            img = img[150:-12] #crop
+            img = img[150:-12] # crop
             img = cv2.resize(img,(480,240))
             dist, isEnded = getLaneCurve(img, display=0)
             

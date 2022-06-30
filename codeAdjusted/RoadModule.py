@@ -19,7 +19,7 @@ def getLaneCurve(img, display = 2):
 
     if RoadEnded(imgWarp): streetEnded = True
 
-    RoadCenter, imgHist = utils.getHistogram(imgWarp,display=True,minPer=0.5,region=4)
+    RoadCenter, imgHist = utils.getHistogram(imgWarp,display=True,minPer=0.5,region=0.75)
 
     imgCenter = 240
 
@@ -35,20 +35,13 @@ def getLaneCurve(img, display = 2):
         imgLaneColor[:] = 0, 255, 0
         imgLaneColor = cv2.bitwise_and(imgInvWarp, imgLaneColor)
         imgResult = cv2.addWeighted(imgResult,1,imgLaneColor,1,0)
-        midY = 450
-        cv2.putText(imgResult,str(dist),(wT//2-80,hT//2),cv2.FONT_HERSHEY_COMPLEX,2,'cyan',3)
-        cv2.line(imgResult,(wT//2,midY),(wT//2+(curve*3),midY),(255,0,255),5)
-        cv2.line(imgResult, ((wT // 2 + (dist * 3)), midY-25), (wT // 2 + (dist * 3), midY+25), (0, 255, 0), 5)
-        for x in range(-30, 30):
-            w = wT // 20
-            cv2.line(imgResult, (w * x + int(dist//50 ), midY-10),
-                    (w * x + int(dist//50 ), midY+10), (0, 0, 255), 2)
-        #fps = cv2.getTickFrequency() / (cv2.getTickCount() - timer);
-        #cv2.putText(imgResult, 'FPS '+str(int(fps)), (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (230,50,50), 3)
+        smoothImg = imgResult.copy()
+        cv2.putText(imgResult,str(dist),(wT//2-80,hT//2),cv2.FONT_HERSHEY_COMPLEX,2,(255,255,0),3)
 
     if display == 2:
-        imgStacked = utils.stackImages(0.7,([img,imgWarpPoints,imgWarp],
-                                            [imgHist,imgLaneColor,imgResult]))
+        cv2.putText(smoothImg,str(round(smoothDist,2)),(wT//2-80,hT//2),cv2.FONT_HERSHEY_COMPLEX,2,(255,255,0),3)
+        imgStacked = utils.stackImages(0.7,([img,imgWarpPoints,imgThres, imgWarp],
+                                            [imgHist,imgLaneColor,imgResult, smoothImg]))
         cv2.imshow('ImageStack',imgStacked)
 
     elif display == 1:
@@ -58,26 +51,26 @@ def getLaneCurve(img, display = 2):
 
 
 def RoadEnded(warpedImg):
-    w, h = warpedImg.shape[:2]
-    rowStart = int(0.5*w)
-    rowEnd = int(0.7*w)
-    nWhitePixelsFrame = warpedImg[rowStart:rowEnd].sum()//255
+    h, w = warpedImg.shape[:2]
+    rowStart = int(0.5*h)
+    rowEnd = int(0.7*h)
+    nWhitePixelsFrame = warpedImg[rowStart:rowEnd].sum()/255
     threshold = 0.02
     # less than the 2% of the stripe must be white
-    return nWhitePixelsFrame < threshold * (rowEnd-rowStart)*h 
+    return nWhitePixelsFrame < threshold * (rowEnd-rowStart)*w
 
 
 def smoothed(dist):
     normalizedDist = dist//240
     n = np.sqrt(np.log10(abs(normalizedDist)/4+1))
-    return 0 * (-15 <= dist <= 15) + n * (dist>15) - n * (dist<15)
+    return n * (dist>15) - n * (dist<15)
 
 
 
 
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("../data/testReflex.avi")
     initalTrackbarVals = [106, 111, 24, 223]
     utils.initializeTrackbars(initalTrackbarVals)
 
