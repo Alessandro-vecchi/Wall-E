@@ -1,5 +1,5 @@
 from MotorModule import Motor
-from LaneModule import getLaneCurve
+from RoadModule import getLaneCurve
 import numpy as np
 import cv2
  
