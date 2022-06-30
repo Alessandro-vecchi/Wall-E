@@ -7,12 +7,12 @@ motor = Motor(2,3,4,16,20,21)
 ##################################################
  
 def main():
-    andata = trip()
-    turnAround = motor.parkour()
-    ritorno = trip()
+    trip()    # andata
+    motor.parkour() # turnAround
+    trip()  # ritorno
 
 def trip():
-    cap = cv2.VideoCapture("../data/testReflex.avi")
+    cap = cv2.VideoCapture(0)
     #initalTrackbarVals = [56, 131, 0, 240]
     #utils.initializeTrackbars(initalTrackbarVals)
     while cap.isOpened():
