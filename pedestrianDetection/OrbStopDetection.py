@@ -1,5 +1,5 @@
 import cv2, numpy as np
-img1 = cv2.imread('stop2.jpg')
+img1 = cv2.imread('stop.png')
 cap = cv2.VideoCapture(0)
 orb = cv2.ORB_create()
 kpts1, descr1 = orb.detectAndCompute(img1, None)
