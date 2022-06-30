@@ -63,7 +63,7 @@ def RoadEnded(warpedImg):
 def smoothed(dist):
     normalizedDist = dist/240
     n = np.sqrt(np.log10(abs(normalizedDist)/4+1))
-    return n * (dist>15) - n * (dist<15)
+    return n * (dist>15) - n * (dist<-15)
 
 
 
