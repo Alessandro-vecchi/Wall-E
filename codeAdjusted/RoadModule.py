@@ -61,7 +61,7 @@ def RoadEnded(warpedImg):
 
 
 def smoothed(dist):
-    normalizedDist = dist//240
+    normalizedDist = dist/240
     n = np.sqrt(np.log10(abs(normalizedDist)/4+1))
     return n * (dist>15) - n * (dist<15)
 
@@ -71,6 +71,7 @@ def smoothed(dist):
 
 if __name__ == '__main__':
     cap = cv2.VideoCapture("../data/testReflex.avi")
+
     initalTrackbarVals = [106, 111, 24, 223]
     utils.initializeTrackbars(initalTrackbarVals)
 
