@@ -10,6 +10,7 @@ def main():
     trip()    # andata
     motor.parkour() # turnAround
     trip()  # ritorno
+    motor.stop()
 
 def trip():
     cap = cv2.VideoCapture(0)
@@ -30,7 +31,6 @@ def trip():
                 break
         else:
             break
-    motor.stop()
      
  
 if __name__ == '__main__':

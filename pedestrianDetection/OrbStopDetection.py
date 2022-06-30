@@ -1,6 +1,6 @@
 import cv2, numpy as np
 
-img1 = cv2.imread('stop.png')
+img1 = cv2.imread('stopimg.png')
 img2 = cv2.imread('stop2.png')
 
 orb = cv2.ORB_create()
