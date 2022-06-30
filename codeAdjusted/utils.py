@@ -41,7 +41,7 @@ def valTrackbars(wT=480, hT=240):
 
 def drawPoints(img, points):
     for x in range(4):
-        cv2.circle(img,(int(points[x][0]),int(points[x][1])),15,(255,0,0),cv2.FILLED)
+        cv2.circle(img,(int(points[x][0]),int(points[x][1])),15,(26, 255, 255),cv2.FILLED)
     return img
 
 
