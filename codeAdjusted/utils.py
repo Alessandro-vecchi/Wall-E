@@ -41,7 +41,7 @@ def valTrackbars(wT=480, hT=240):
 
 def drawPoints(img, points):
     for x in range(4):
-        cv2.circle(img,(int(points[x][0]),int(points[x][1])),15,(26, 255, 255),cv2.FILLED)
+        cv2.circle(img,(int(points[x][0]),int(points[x][1])),15,(255,0,0),cv2.FILLED)
     return img
 
 
@@ -50,14 +50,13 @@ def getHistogram(img,display=False,minPer = 0.1,region= 1):
     if region == 1:
         histValues = np.sum(img, axis=0)
     else:
-        histValues = np.sum(img[int(img.shape[0]*region):,:], axis=0)
+        histValues = np.sum(img[-h//region:,:], axis=0)
 
     maxValue = np.max(histValues)  # FIND THE MAX VALUE
     minValue = minPer*maxValue
 
     indexArray = np.where(histValues >= minValue)
     basePoint = int(np.average(indexArray))
-    #print(basePoint)
 
     if display:
         imgHist = np.zeros((h, w, 3),np.uint8)
@@ -65,7 +64,7 @@ def getHistogram(img,display=False,minPer = 0.1,region= 1):
         # print(intensity)
             if intensity > minValue:color=(211,211,211)
             else: color=(200,165,200)
-            cv2.line(imgHist,(x,h),(x,int(h-(intensity*region//255))),color,1)
+            cv2.line(imgHist,(x,h),(x,int(h-(intensity//region//255))),color,1)
             cv2.circle(imgHist,(basePoint,h),20,(255,200,0),cv2.FILLED)
         return basePoint, imgHist
     
