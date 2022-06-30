@@ -54,7 +54,21 @@ class Motor():
     def stop(self,t=0):
         self.pwmA.ChangeDutyCycle(0);
         self.pwmB.ChangeDutyCycle(0);
-        sleep(t)     
+        sleep(t)
+        
+    def parkour(self,speed=0,t=0):
+        turn = 50
+        leftSpeed = speed - turn
+        rightSpeed = speed + 80
+
+        self.pwmA.ChangeDutyCycle(abs(leftSpeed))
+        self.pwmB.ChangeDutyCycle(abs(rightSpeed))
+
+        GPIO.output(self.In1A,GPIO.LOW)
+        GPIO.output(self.In2A,GPIO.HIGH)
+        GPIO.output(self.In1B,GPIO.HIGH)
+        GPIO.output(self.In2B,GPIO.LOW)
+        sleep(t)
 
 
 def main():
