@@ -19,7 +19,7 @@ def getLaneCurve(img, display = 2):
 
     if RoadEnded(imgWarp): streetEnded = True
 
-    RoadCenter, imgHist = utils.getHistogram(imgWarp,display=True,minPer=0.5,region=0.75)
+    RoadCenter, imgHist = utils.getHistogram(imgWarp,display=True,minPer=0.5,region=4)
 
     imgCenter = 240
 
@@ -48,8 +48,7 @@ def getLaneCurve(img, display = 2):
 
     if display == 2:
         cv2.putText(smoothImg,str(round(smoothDist,2)),(wT//2-80,hT//2),cv2.FONT_HERSHEY_COMPLEX,1.5,(255,0,0),3)
-        imgStacked = utils.stackImages(0.7,([img,imgThres,imgWarpPoints, imgWarp],
-                                            [imgHist,imgLaneColor,imgResult, smoothImg]))
+        imgStacked = utils.stackImages(1,([img,imgThres,imgWarpPoints],[imgWarp,imgHist,imgResult]))
         cv2.imshow('ImageStack',imgStacked)
 
     elif display == 1:
