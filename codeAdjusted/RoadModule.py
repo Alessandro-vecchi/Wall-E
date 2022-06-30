@@ -36,13 +36,16 @@ def getLaneCurve(img, display = 2):
         imgLaneColor = cv2.bitwise_and(imgInvWarp, imgLaneColor)
         imgResult = cv2.addWeighted(imgResult,1,imgLaneColor,1,0)
         smoothImg = imgResult.copy()
+
         if dist >=0:
             cv2.putText(imgResult,str(dist)[:5],(RoadCenter-15,hT//2),cv2.FONT_HERSHEY_COMPLEX,1.5,(255, 0, 0),3)
         else:
             cv2.putText(imgResult,str(dist)[:5],(RoadCenter-35,hT//2),cv2.FONT_HERSHEY_COMPLEX,1.5,(255, 0, 0),3)
+
         cv2.circle(imgResult,(imgCenter,img.shape[0]-10),9,(0,0,255),cv2.FILLED)
         cv2.circle(imgResult,(RoadCenter,img.shape[0]-10),8,(255,200,0),3)
         cv2.line(imgResult, (imgCenter,img.shape[0]-10),(RoadCenter,img.shape[0]-10), (0,0,0), 4) 
+        
     if display == 2:
         cv2.putText(smoothImg,str(round(smoothDist,2)),(wT//2-80,hT//2),cv2.FONT_HERSHEY_COMPLEX,1.5,(255,0,0),3)
         imgStacked = utils.stackImages(0.7,([img,imgThres,imgWarpPoints, imgWarp],
