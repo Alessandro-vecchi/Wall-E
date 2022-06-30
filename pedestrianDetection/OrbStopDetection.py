@@ -16,7 +16,7 @@ matches = bfm.knnMatch(descr1, descr2, k=2)
 # by computing the distance from the closest neighbour to the second closest neighbour
 good_matches = []
 for closest_neighbour, cn2 in matches:
-    if closest_neighbour.distance < .03 * cn2.distance:
+    if closest_neighbour.distance < .50 * cn2.distance:
         good_matches.append(closest_neighbour)
 
 # check if we have enough matches to compute the homography
