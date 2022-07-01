@@ -73,9 +73,6 @@ def smoothed(dist):
     return n * (dist>15) - n * (dist<-15)
 
 
-
-
-
 if __name__ == '__main__':
     cap = cv2.VideoCapture("/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/laneVideo/testReflex.avi")
 

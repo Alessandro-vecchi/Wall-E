@@ -76,7 +76,8 @@ def main():
     motor.stop(2)
     motor.move(-0.2,0,2)
     motor.stop(2)
- 
+
+
 if __name__ == '__main__':
     motor= Motor(2,3,4,16,20,21)
     main()

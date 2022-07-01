@@ -14,6 +14,7 @@ def main():
     motor.stop(1)
     print('The end')
 
+
 def trip():
     blackFrames = 0
     cap = cv2.VideoCapture(0)
@@ -54,7 +55,8 @@ def trip():
                 break
         else:
             break
-     
+
+
 def turnAround():
     motor.move(0.2, 0, 0.6)
     cap = cv2.VideoCapture(0)
