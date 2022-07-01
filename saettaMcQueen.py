@@ -1,4 +1,4 @@
-from MotorModule import Motor
+from codeAdjusted.MotorModule import Motor
 from LaneModule import getLaneCurve
 import numpy as np
 import cv2

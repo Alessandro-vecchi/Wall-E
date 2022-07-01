@@ -1,4 +1,4 @@
-from MotorModule import Motor
+from codeAdjusted.MotorModule import Motor
 import KeyPressModule as kp
 import cv2
 motor = Motor(2,3,4,16,20,21)
