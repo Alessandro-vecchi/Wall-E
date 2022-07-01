@@ -1,7 +1,7 @@
 import utils
 from MotorModule import Motor
-from RoadModule import getLaneCurve
-import cv2
+import RoadModule as Rm
+import cv2, numpy as np
 from time import sleep
 
 ##################################################
@@ -10,16 +10,13 @@ motor = Motor(2,3,4,16,20,21)
  
 def main():
     trip()    # andata
-    motor.move(0.2,0,0.28)
-    motor.parkour(t=0.95)
-    motor.stop(0.4) 
-    sleep(0.4)# turnAround    
+    turnAround()# turnAround    
     trip()  # ritorno
     motor.stop(1)
-    print('the end')
+    print('The end')
 
 def trip():
-    endlist = []
+    blackFrames = 0
     cap = cv2.VideoCapture(0)
     #initalTrackbarVals = [56, 131, 0, 240]
     #utils.initializeTrackbars(initalTrackbarVals)
@@ -28,22 +25,30 @@ def trip():
     while cap.isOpened():
         ret, img = cap.read()
         if ret == True:
-            cf = (cf +1)%30
-            if cf == 0: cstops = 0
 
             img = img[150:-12] # crop
             img = cv2.resize(img,(480,240))
 
+            cf = (cf +1)%30
+            if cf == 0: cstops = 0
+
             if cf % 2:
-                cstops += utils.stopDetector(img,'cascade.xml')
+                cstops += utils.stopDetector(img,'cascade.xml', 1200)
 
             if cstops >= 5:
                 motor.stop(2)
                 cstops=0
-            dist, isEnded = getLaneCurve(img, display=0)
-            endlist.append(isEnded)
-            if sum(endlist) > 10:
+
+            dist, isEnded = Rm.getLaneCurve(img, display=0)
+
+            if isEnded:
+                blackFrames += 1
+            else:
+                blackFrames = 0
+            
+            if blackFrames > 10:
                 break
+
             motor.move(0.2,-dist,0.01)
 
             if cv2.waitKey(1) == ord("q"):
@@ -51,6 +56,21 @@ def trip():
         else:
             break
      
- 
+def turnAround():
+    motor.move(0.2, 0, 0.6)
+    cap = cv2.VideoCapture(0)
+    while cap.isOpened():
+        ret, img = cap.read()
+        if ret == True:
+            img = cv2.resize(img[150:-12],(480,240))
+        imgThres = utils.thresholding(img)
+
+        hT, wT = img.shape[:2]
+        points = np.float32([(106, 111), (480-106, 111),(24 , 223 ), (480-24, 223)])
+        eagleView = utils.warpImg(imgThres,points,wT,hT)
+        if not Rm.RoadEnded(eagleView):
+            break
+        motor.parkour()
+
 if __name__ == '__main__':
     main()

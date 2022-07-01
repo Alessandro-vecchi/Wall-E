@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 def thresholding(img):
     img = cv2.GaussianBlur(img,(5,5),cv2.BORDER_DEFAULT)
     imgHsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -8,6 +9,7 @@ def thresholding(img):
     upperWhite = np.array([179,110,255])
     maskWhite = cv2.inRange(imgHsv,lowerWhite,upperWhite)
     return maskWhite
+
 
 def warpImg(img,points,w,h,inv = False):
     pts1 = np.float32(points)
@@ -22,6 +24,7 @@ def warpImg(img,points,w,h,inv = False):
 def nothing(a):
     pass
 
+
 def initializeTrackbars(intialTracbarVals,wT=480, hT=240):
     cv2.namedWindow("Trackbars")
     cv2.resizeWindow("Trackbars", 360, 240)
@@ -29,6 +32,7 @@ def initializeTrackbars(intialTracbarVals,wT=480, hT=240):
     cv2.createTrackbar("Height Top", "Trackbars", intialTracbarVals[1], hT, nothing)
     cv2.createTrackbar("Width Bottom", "Trackbars", intialTracbarVals[2],wT//2, nothing)
     cv2.createTrackbar("Height Bottom", "Trackbars", intialTracbarVals[3], hT, nothing)
+
 
 def valTrackbars(wT=480, hT=240):
     widthTop = cv2.getTrackbarPos("Width Top", "Trackbars")
@@ -38,6 +42,7 @@ def valTrackbars(wT=480, hT=240):
     points = np.float32([(widthTop, heightTop), (wT-widthTop, heightTop),
                       (widthBottom , heightBottom ), (wT-widthBottom, heightBottom)])
     return points
+
 
 def drawPoints(img, points):
     for x in range(4):
@@ -91,6 +96,7 @@ def imageMatrix(scale, imgArray):
 
     return np.vstack(hor)
 
+
 def imageArray(scale, imgArray):
 
     for x in range(0, len(imgArray)):
@@ -102,8 +108,8 @@ def imageArray(scale, imgArray):
 
     return np.hstack(imgArray)
 
-def stopDetector(img,cascadePath):
-    a=0
+
+def stopDetector(img,cascadePath, minArea):
     cascade = cv2.CascadeClassifier(cascadePath)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     scaleVal = 1 + 161/1000
@@ -111,6 +117,6 @@ def stopDetector(img,cascadePath):
     objects = cascade.detectMultiScale(gray, scaleVal, neig)
     for (x,y,w,h) in objects:
         area = w*h
-        if area > 1200:
-            a = 1
-    return a
+        if area > minArea:
+            return 1
+    return 0
