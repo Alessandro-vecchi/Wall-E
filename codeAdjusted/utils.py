@@ -118,5 +118,21 @@ def stopDetector(img,cascadePath, minArea):
     for (x,y,w,h) in objects:
         area = w*h
         if area > minArea:
-            return 1
+            return w
     return 0
+
+
+def distance_to_camera(perWidth):
+    # https://pyimagesearch.com/2015/01/19/find-distance-camera-objectmarker-using-python-opencv/
+	# compute and return the distance from the marker to the camera
+    knownWidth = 5 # width stop sign
+    focalLength = 2 # to be obtained
+    '''
+    box = cv2.cv.BoxPoints(marker) if imutils.is_cv2() else cv2.boxPoints(marker)
+	box = np.int0(box)
+	cv2.drawContours(image, [box], -1, (0, 255, 0), 2)
+	cv2.putText(image, "%.2fft" % (inches / 12),
+		(image.shape[1] - 200, image.shape[0] - 20), cv2.FONT_HERSHEY_SIMPLEX,
+		2.0, (0, 255, 0), 3)'''
+    return (knownWidth * focalLength) / perWidth
+
