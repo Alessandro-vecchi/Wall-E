@@ -60,11 +60,11 @@ def getLaneCurve(img, display = 2):
 def RoadEnded(warpedImg):
     h, w = warpedImg.shape[:2]
     rowStart = int(0.5*h)
-    rowEnd = int(0.7*h)
+    rowEnd = int(0.9*h)
     nWhitePixelsFrame = warpedImg[rowStart:rowEnd].sum()/255
     threshold = 0.02
     # less than the 2% of the stripe must be white
-    return nWhitePixelsFrame < threshold * (rowEnd-rowStart)*w
+    return nWhitePixelsFrame < 30   #  threshold * (rowEnd-rowStart)*w
 
 
 def smoothed(dist):

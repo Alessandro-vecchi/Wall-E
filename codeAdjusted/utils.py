@@ -101,3 +101,16 @@ def imageArray(scale, imgArray):
             imgArray[x] = cv2.cvtColor(imgArray[x], cv2.COLOR_GRAY2BGR)
 
     return np.hstack(imgArray)
+
+def stopDetector(img,cascadePath):
+    a=0
+    cascade = cv2.CascadeClassifier(cascadePath)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    scaleVal = 1 + 161/1000
+    neig = 11
+    objects = cascade.detectMultiScale(gray, scaleVal, neig)
+    for (x,y,w,h) in objects:
+        area = w*h
+        if area > 1200:
+            a = 1
+    return a
