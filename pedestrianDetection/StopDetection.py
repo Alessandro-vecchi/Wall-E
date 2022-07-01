@@ -2,7 +2,7 @@ import cv2
 
 path = 'haarcascades/.xml' # Cascade's path
 cameraNo = 1
-objectName = 'STOP sign'
+objectName = 'STOP'
 frameWidth = 640
 frameHeight = 480
 color = (255, 255, 0)
