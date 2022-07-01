@@ -39,7 +39,7 @@ def trip():
             
             perceivedW = utils.stopDetector(img,'cascade.xml', 1200)
             distance3D = utils.distance_to_camera(perceivedW)
-            if 10 < distance3D < 15:
+            if 10 < distance3D < 15: # in cm
                 motor.stop(2)
                 motor.move(0.2, 0, 0.3)
             dist, isEnded = Rm.getLaneCurve(img, display=0)
