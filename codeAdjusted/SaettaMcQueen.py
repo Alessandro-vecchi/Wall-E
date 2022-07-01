@@ -19,7 +19,7 @@ def trip():
     cap = cv2.VideoCapture(0)
     #initalTrackbarVals = [56, 131, 0, 240]
     #utils.initializeTrackbars(initalTrackbarVals)
-    count_nyStop = [0, 0]
+    #count_nyStop = [0, 0]
     while cap.isOpened():
         ret, img = cap.read()
         if ret == True:
@@ -46,7 +46,7 @@ def trip():
             if isEnded: blackFrames += 1 
             else: blackFrames = 0
             
-            if blackFrames > 5: break
+            if blackFrames > 8: break
 
             motor.move(0.2,-dist,0.01)
 
