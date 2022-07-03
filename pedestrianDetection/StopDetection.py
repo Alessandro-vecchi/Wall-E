@@ -1,10 +1,5 @@
 import cv2
-
-<<<<<<< HEAD
-path = r'C:\Users\devin\Desktop\Università\Ai_lab\proj\Cars-repo\cascade.xml' # Cascade's path
-=======
-path = '/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo/codeAdjusted/cascade.xml' # Cascade's path
->>>>>>> a9253be3b2bd0078643ef89fa6e59ef05400a79d
+path = r'C:\Users\devin\Desktop\Università\Ai_lab\proj\Cars-repo\cascade.xml' 
 cameraNo = 0
 objectName = 'STOP'
 frameWidth = 640
