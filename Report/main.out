@@ -1,0 +1,31 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Problem Statement}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Engineering Design Tasks}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Component \040Analysis}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Motors}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Left motor Characteristic}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Right motor Characteristic}{subsection.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Arduino Microcontroller \(SparkFun\)}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Silicon NPN Transistor \(2N5192G\)}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.4}{Resistors}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.5}{Capacitors}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.6}{Microphone}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.7}{RedBot Sensors}{section.2}% 13
+\BOOKMARK [1][-]{section.3}{Lane detection with Image processing}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Thresholding}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Warping}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.3}{Centering}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.4}{Finding the radius of curvature}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.5}{Hardware implementation}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.6}{How to recognize that the lane has ended}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.7}{How to turn around}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{Stop recognition using Haar Cascade Classifier}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.3}{}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.4}{Stop implementation in our car}{section.4}% 26
+\BOOKMARK [1][-]{section.5}{Code}{}% 27
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 28
+\BOOKMARK [1][-]{section.7}{Self-Evaluation \046 Future Projects}{}% 29
+\BOOKMARK [2][-]{subsection.7.1}{Finding the curve}{section.7}% 30
+\BOOKMARK [1][-]{section.8}{References}{}% 31

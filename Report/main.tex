@@ -84,7 +84,7 @@ As engineers, we take on the task of designing a new device with a unique approa
 \end{itemize}
 
 
-\section{Component $\&$ Analysis}
+\section{Component & Analysis}
 
 
 \subsection{Motors}
@@ -94,13 +94,13 @@ In electronics, a motor is an electrical machine that converts electrical energy
 \begin{figure} [hbp]
 \centering
   \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth, height = 5cm]{Left.jpg}
+    \includegraphics[width=\textwidth, height = 5cm]{images/perspective_transform.jpg}
     \caption{Left motor Characterization}
     \label{fig:f1}
   \end{subfigure}
   \hspace{1cm}
   \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth, height = 5cm]{Right.jpg}
+    \includegraphics[width=\textwidth, height = 5cm]{images/perspective_transform.jpg}
     \caption{Right motor Characterization}
     \label{fig:f2}
   \end{subfigure}
@@ -121,7 +121,7 @@ $~~~~~I=0.018806V+0.032521 ~~~~(stalling)~~~$  Stalling Point - (0.4,0.057)\\
 An Arduino Microcontroller is a multipurpose tool that can be used for many electronics projects as it provides many functions to a particular circuit. For our project we use it to control the vehicle's microphone sensor and the 2 RedBot sensors using C-Language code. After familiarizing with C, we wrote the code to control the sensors ourselves. (\textit{code posted below})
 \begin{figure}[hbp]
 \centering
-\includegraphics[width=0.4\textwidth]{ar.jpg}
+\includegraphics[width=0.4\textwidth]{images/perspective_transform.jpg}
 \caption{\label{fig:i}Arduino Microcontroller (SparkFun)\\Source: \protect\url{http://bit.ly/1Xo6sRz}}
 \end{figure}
 
@@ -130,7 +130,7 @@ A transistor is formally defined as a semiconductor device which can be used to 
 
 \begin{figure}[hbp]
 \centering
-\includegraphics[width=0.4\textwidth, height = 3cm]{tr.jpg}
+\includegraphics[width=0.4\textwidth, height = 3cm]{images/perspective_transform.jpg}
 \caption{\label{fig:4}Silicon NPN Transistor (2N5192G)\\Source: \protect\url{http://bit.ly/1Spy8ii}}
 \end{figure}
 
@@ -157,7 +157,7 @@ An image of the sensor and the data-readings (the characteristic) as a function 
   \begin{subfigure}[b]{0.4\textwidth}
   \centering
   \captionsetup{justification=centering}
-    \includegraphics[width=4cm, height = 6cm]{red.jpg}
+    \includegraphics[width=4cm, height = 6cm]{images/perspective_transform.jpg}
     \caption{Image of the sensor \\Source \protect\url{http://bit.ly/1LFJ5Xr}}
    
   \end{subfigure}
@@ -165,7 +165,7 @@ An image of the sensor and the data-readings (the characteristic) as a function 
   \begin{subfigure}[b]{0.4\textwidth}
   \centering
   \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth, height = 6cm]{char.png}
+    \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
     \caption{Characterization of the sensor \\(generated with Octave)}
     
   \end{subfigure}
@@ -187,7 +187,7 @@ In order to reach this goal we are going to divide the task in 5 different steps
 
 \begin{figure}[hbp]
 \centering
-\includegraphics[width=0.4\textwidth, height = 4cm]{track.png}
+\includegraphics[width=0.4\textwidth, height = 4cm]{images/perspective_transform.jpg}
 \caption{\label{fig:5}Test track for the vehicle with curved corners\\Source: \protect\url{http://bit.ly/1PTRAGf}}
 \end{figure}
 
@@ -201,7 +201,7 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=4cm, height = 6cm]{red.jpg}
+      \includegraphics[width=4cm, height = 6cm]{images/perspective_transform.jpg}
       \caption{How we see the path}
       
     \end{subfigure}
@@ -209,7 +209,7 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth, height = 6cm]{char.png}
+      \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
       \caption{Thresholded path \\}
       
     \end{subfigure}
@@ -326,7 +326,7 @@ Once the end of the first round is detected, the car start turning back. The way
 \section{Code}
 
 The next code will be directly imported from a file (Random Code now)
-\lstinputlisting[language=C++]{gift1.cpp}
+\lstinputlisting[language=python]{../pedestrianDetection/StopDetection.py}
 
 
 \section{Conclusion}
@@ -336,7 +336,7 @@ After designing the circuit required, assembling the circuit on the breadboard a
   \begin{subfigure}[b]{0.4\textwidth}
   \centering
   \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth, height = 6cm]{pr1.jpg}
+    \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
     \caption{Front-Side view of chassis w/ circuit\\ (Redbot sensors attached)}
     \label{fig:g1}
   \end{subfigure}
@@ -344,7 +344,7 @@ After designing the circuit required, assembling the circuit on the breadboard a
   \begin{subfigure}[b]{0.4\textwidth}
   \centering
   \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth, height = 6cm]{pr2.jpg}
+    \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
     \caption{Side view of chassis \\(Motor, Arduino, Circuit visible)}
     \label{fig:g2}
   \end{subfigure}
