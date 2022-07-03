@@ -10,9 +10,9 @@ def getLaneCurve(img, display = 2):
 
     imgThres = utils.thresholding(img)
 
-    hT, wT, c = img.shape
+    hT, wT = img.shape[:2]
     #points = utils.valTrackbars()
-    points = np.float32([(106, 111), (480-106, 111),(24 , 223 ), (480-24, 223)])
+    points = np.float32([(106, 111), (480-106, 111),(24 ,223), (480-24, 223)])
     imgWarp = utils.warpImg(imgThres,points,wT,hT)
 
     imgWarpPoints = utils.drawPoints(imgCopy,points)
@@ -59,8 +59,8 @@ def getLaneCurve(img, display = 2):
 
 def RoadEnded(warpedImg):
     h, w = warpedImg.shape[:2]
-    rowStart = int(0.5*h)
-    rowEnd = int(0.7*h)
+    rowStart = int(0.4*h)
+    rowEnd = int(0.8*h)
     nWhitePixelsFrame = warpedImg[rowStart:rowEnd].sum()/255
     threshold = 0.02
     # less than the 2% of the stripe must be white
@@ -73,11 +73,8 @@ def smoothed(dist):
     return n * (dist>15) - n * (dist<-15)
 
 
-
-
-
 if __name__ == '__main__':
-    cap = cv2.VideoCapture(r"..\..\Proj\NewVideo_Trim.avi")
+    cap = cv2.VideoCapture("/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/laneVideo/testReflex.avi")
 
     initalTrackbarVals = [106, 111, 24, 223]
     utils.initializeTrackbars(initalTrackbarVals)

@@ -1,6 +1,10 @@
 import cv2
 
+<<<<<<< HEAD
 path = r'C:\Users\devin\Desktop\Università\Ai_lab\proj\Cars-repo\cascade.xml' # Cascade's path
+=======
+path = '/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo/codeAdjusted/cascade.xml' # Cascade's path
+>>>>>>> a9253be3b2bd0078643ef89fa6e59ef05400a79d
 cameraNo = 0
 objectName = 'STOP'
 frameWidth = 640
@@ -32,14 +36,15 @@ while True:
 
     # GET CAMERA IMAGE AND CONVERT TO GRAYSCALE
     success, img = cap.read()
+    if not success:
+        break
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # DETECT OBJECT USING CASCADE
     scaleVal = 1 + (cv2.getTrackbarPos("Scale", "Result") /1000)
     neig = cv2.getTrackbarPos("Neig", "Result")
-
     objects = cascade.detectMultiScale(gray, scaleVal, neig)
-
+    print(objects)
     # DISPLAY DETECTED ONJECTS
     for (x,y,w,h) in objects:
         area = w*h
