@@ -303,11 +303,14 @@ As you can see from the graph, its behaviour is too line-shaped to satisfy our g
 In practice, we also changed the scaling of the $x$ variable because we saw it worked better inside the range between the green and purple function.
 
 \subsection{Hardware implementation}
-Finally, we are at the end on this section. We just need to implement the function that acts on the robot. 
+Now we need to implement the function that acts on the robot.  
 
 \subsection{How to recognize that the lane has ended}
+To recognize the end of the track it's enough to just identify a stripe on the mid-bottom part of the warped image that has a huge amount of black pixels. This is because the warped image consider only the street immediately in front of the vehicle and thus if there is a road it will detect it with the corrispective amount of white pixels. To make the detection of the end of the lane more resistant to threshold's noise we will not check for the blackness of the full stripe but we will just make sure that there is at least the 95\% of black pixels on that region. \\
+Moreover, even if small, there is a chance that the car can stop if we just detect blackness on just one frame. Thus, reasonably enough, we will take a mini-batch of frames and if most of them assess that the frames detected are black the car will simply stop or turn around.  
 
 \subsection{How to turn around}
+Once the end of the first round is detected, the car start turning back. The way it does that it's by giving a different power to the left and right motor. This allows the car to turn on itself till the camera detect the track again.\\
 
 \section{Stop recognition using Haar Cascade Classifier}
 
