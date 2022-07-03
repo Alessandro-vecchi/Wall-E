@@ -1,8 +1,8 @@
 import cv2
 
-path = 'haarcascades/.xml' # Cascade's path
-cameraNo = 1
-objectName = 'STOP sign'
+path = r'C:\Users\devin\Desktop\Università\Ai_lab\proj\Cars-repo\cascade.xml' # Cascade's path
+cameraNo = 0
+objectName = 'STOP'
 frameWidth = 640
 frameHeight = 480
 color = (255, 255, 0)
