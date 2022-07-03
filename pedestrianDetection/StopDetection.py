@@ -1,5 +1,5 @@
 import cv2
-path = r'C:\Users\devin\Desktop\Università\Ai_lab\proj\Cars-repo\cascade.xml' 
+path = r'cascade.xml' 
 cameraNo = 0
 objectName = 'STOP'
 frameWidth = 640
