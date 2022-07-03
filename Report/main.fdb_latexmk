@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1656868153 "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.tex" "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.pdf" "main" 1656868153
-  "../pedestrianDetection/StopDetection.py" 1656867189 1761 a96ab96d372b5591771c254427280ee7 ""
-  "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.aux" 1656868153 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.tex" 1656868148 23986 f87c7b573e3b2ce5786456a9999cfd86 ""
+["pdflatex"] 1656868267 "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.tex" "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.pdf" "main" 1656868267
+  "../pedestrianDetection/StopDetection.py" 1656868260 1927 b93a05a38fa5773b79fe1313292f7528 ""
+  "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.aux" 1656868267 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.tex" 1656868261 23989 207835cc2677238f954b4eae695deced ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -147,6 +147,7 @@
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls" 1580683321 20023 e427dd9e17e239bf926ef3aab67fe35e ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty" 1580683321 5050 8933a39ad74377accd18991c5eb90c58 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/omlcmr.fd" 1580683321 2471 93c7889092ef3d83d375b915c5381dfe ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/base/omscmr.fd" 1580683321 2470 59e43b502a8bea3a12f4954945302e40 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo" 1580683321 8447 5c4b8ee712f8e349df2722115bc8c513 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/blindtext/blindtext.sty" 1325892463 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty" 1578175482 57350 70b0c251b0022f1db12ad7dd4c1aa547 ""
@@ -214,11 +215,11 @@
   "images/road_endless_straight_vanishing.jpg" 1656867189 35146 2e6dafc7e328cb9d75afa25494219aba ""
   "main.aux" 0 -1 0 "pdflatex"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1656868148 23986 f87c7b573e3b2ce5786456a9999cfd86 ""
+  "main.tex" 1656868261 23989 207835cc2677238f954b4eae695deced ""
   (generated)
   "main.log"
-  "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.log"
-  "main.out"
   "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.pdf"
-  "main.pdf"
+  "main.out"
+  "/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Report/main.log"
   "main.aux"
+  "main.pdf"
