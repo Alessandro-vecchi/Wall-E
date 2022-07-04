@@ -344,11 +344,108 @@ After searching for a week for LEGO's STOP signals, we manage to print them in 3
 To detect them we tried firstly to use SIFT and ORB as matching tecniques, as we did in class, but unfortunately the sign posts had a too low number of relevant descriptors to be of any use.
 Then we tried a couple of machine learning techniques that could have revealed interesting, like logistic regression and a multi-layer perceptron, but we didn't manage to achieve a decent accuracy with them, it was always around 65\%.
 Finally, we encountered the Haar feature-based Cascade classifier, which is a machine learning based approach where a cascade function is trained from a lot of positive and negative images. It is then used to detect objects in other images. With it we managed to achieve a really good accuracy and our car manage to detect the STOP signs flawlessly. Let's now briefly explain how this classifier works.
+
+
 \subsection{Haar Cascade classifier}
+\begin{figure} [!h]
+  \centering
+  \captionsetup{justification=centering}
+  \includegraphics[width=8cm]{images/haar1.png}
+  \caption{Discrimination ability of Haar Features}
+  \end{figure}
+It is based on Haar features, which are computed using Haar filters, two valued filters that make the computations very advantageous. Basically, as it's sketched on the image above, each Haar filters is applied as a correlation on the image and a corresponding value is determined. This value is equivalent to the difference between the sum of the pixels on the white area and sum of the pixels in the black area, as we will see later.
+What does an Haar feature do?
 
-\subsection{}
+\begin{figure} [!hbp]
+  \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/haar2.png}
+      \caption{Discrimination ability of Haar Features}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/haar3.png}
+      \caption{Detecting }
+      
+    \end{subfigure}
+  \end{figure}
+Its role consists on detecting differences on intensities on each area where an Haar filter is applied on the image. They are of course sensitive to scale, since if we are scanning an image using a 2 by 2 filter we can't expect to find a face inside. Therefore we're not only going to apply a type of filter while scanning the whole image, but we are also going to apply different scales of the same filter, for a better classification. 
+Let's now look at its computational complexity and at how it can be improved.
+\begin{figure} [!hbp]
+  \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/haar4.png}
+      \caption{How to compute an Haar feature}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/haar5.png}
+      \caption{Computational complexity of a single Haar feature}
+      
+    \end{subfigure}
+  \end{figure}
+As we can see from the image on the left above, an Haar feature is computed by performing the correlation between the Haar filters and the corresponding portion of the image, but since the haar filters are either -1 or 1, we can remove multiplication and only use additions and subtractions, which are a lot cheaper. However, if we have an $M\times N$ filter, we still need to compute $M\times N/2-1$ additions for the two sums and one more for subtracting them, which results in a total of $(N\times M)-1$ of additions per pixel per scaled filter.
+This cost can be substantially improved if we use integral images.
+\begin{figure} [!h]
+  \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+      \centering
+      \captionsetup{justification=centering}
+        \includegraphics[width=\textwidth]{images/haar6.png}
+        \caption{Integral Image}
+        
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.4\textwidth}
+      \centering
+      \captionsetup{justification=centering}
+        \includegraphics[width=\textwidth]{images/haar7.png}
+        \caption{Integral image yellow cell contains sum of all pixels in the yellow rectangle}
 
-\subsection{}
+      \end{subfigure}
+  \end{figure}
+These images are tables that pre-store in the bottom right vertex the sum of all the pixels inside each rectangle/square with top left vertex which coincides with the top left one of the image. It can compute the sum of any rectagle using only 3 additions, so for an Haar filter it only need 7 additions.
+\begin{figure} [!hbp]
+  \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/haar8.png}
+      \caption{Sum of the pixels in the red square can be computed using only three additions}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/haar9.png}
+      \caption{Haar feature can be computed using only 3+3+1=7 additions}
+      
+    \end{subfigure}
+  \end{figure}
+It can be processed by simply scanning setting in its pixels the sum of the corresponding cell in the image with the two rectangle above it, represented by the integrals sums B and C in the image below, minus the rectangle D that has been added two times.
+\begin{figure} [!h]
+  \centering
+  \captionsetup{justification=centering}
+  \includegraphics[width=10cm]{images/haar10.png}
+  \caption{How to compute the Integral Image}
+  \end{figure}
+
+\subsection{Our implementation}
+We made a script that extracts images from videos. We made a couple of videos on our 3D printed STOP signals which result in 1200 positive images to give as training set and more or less 2000 negative images as negative samples for the training set. The scripts are on the STOP recognition folder. After setting a couple of hyperparameters, we used \href{https://amin-ahmadi.com/cascade-trainer-gui/}{this GUI} to train the classifier and to speed-up the process, which returned the XML file.
+We can now give as input to the Haar cascade classifier implementation of OpenCV our XML file, in order to set the best parameter for detecting the STOPs. Once again, we used trackbars to help us in the selection. We tuned the scale parameter, for selecting the filters with the best scale value; the neig parameter, for removing false positive and only detecting true positives, by considering only window that are in the neighbourhood of other windows; the minArea parameter, since we didn't want very small false positive to be detected; finally, the brightness, in order to be a little more resistant to lightning conditions. Its accuracy is impressive.
+
+
 
 \subsection{STOP implementation in our car}
 We now know the algorithm that recognizes the sign posts. It returns the position of the top-left bounding box rectangle of the stop signal and its width and height if something is detected, otherwise it returns an emtpy list. Reasonably enough, in order to tell the car that something has been detected we can just verify if the list is empty or not. However in this way, even if the accuracy of our algorithm is pretty high, we're not really sure if that thing that has been detected is a STOP or a false positive. Therefore it would be safer to set a mini-batch that verify that at least the $x$\% of it contains detected frames. And this method works pretty well, it only stops in front of stop posts. But the problem is that it often stops more than once in a row. What I mean is that it detects the sign, it stops and then restart searching for STOP signals and it re-stop. We could change manually the threshold of the number of stops detected, but it's not a smart way of solving the problem, even if it is almost always solved. If it start detecting to late or too early, it can fail to recognize the STOP or halt too far from it. We could make the car move for a certain distance before start searching again for STOP, but then in the improbable case that the sign post is in a curve it will go off-road.
