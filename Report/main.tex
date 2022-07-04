@@ -62,29 +62,19 @@
 
 \begin{addmargin}[3em]{1em}
 \centering
-Throughout the AI Lab course we have learnt many Computer Vision and Deep Learning concepts and we applied almost all of them directly or indirectly in our final lab project. Additionally, having taken away a lot from this course, we aimed to make a project that would challenge us academically and intellectually. For our final project, we made an autonomous lane-following car, built by us, that is also able to stop in front of STOP signals and detect if there are pedestrian in the path.
+Throughout the AI Lab course we have learnt many Computer Vision and Deep Learning concepts and we applied almost all of them directly or indirectly in our final lab project. Additionally, having taken away a lot from this course, we aimed to make a project that would challenge us academically and intellectually. For our final project, we made an autonomous lane-following car, built by us, that is also able to stop in front of STOP signals.
 \end{addmargin}
 
 \end{abstract}
 
 \section{Introduction}
 %starting off with the answer
-\subsection{Problem Statement}
 \begin{large}
 It's been quite a journey. We decided to tackle the problem of building from start to finish a self-driving car with Raspberry Pi 4 with a lane following algorithm that doesn't rely on deep learning, but only on a pipeline of various Image Processing techniques. It's been an awesome project, even if we spent a lot of time doing it we enjoyed every part of it. The feeling of succedingly building a self-driving car is unbearable, not mentioning that it can stop and restart at the STOP signal flawlessly. \\
 Originally, we wanted to implement also a lane following algorithm with neural networks and to perform semaphore recognition with a 3D printed semaphore, but we underestimated the amount of time required for this huge project and the rest of the time was spent in internships and for studying the other 4 exams of the semester. But still we manage to complete a lot of tasks and we couldn't be any happier! \\
 Next year we could improve the project during the Deep Learning course by creating a neural network solution to the problem and add vocal commands and speech processing tasks during the NLP course. There is still a lot to be done and we can't wait to go further in learning but, for now, let's settle and fully understand the topics of this course!
-\subsection{Engineering Design Tasks}
-As engineers, we take on the task of designing a new device with a unique approach which highlights our skills as effective problem solvers. Essentially, to design a semi-autonomous vehicle for our final project we followed 4 essential steps which were necessary in coming up with a solution to the problem statement. 
 
-\begin{itemize}
-\item[1] We evaluated the challenge by defining goals and the constraints in the problem.
-\item[2] We researched by reading our helpful Lab modules and procedures to design many possible solutions.
-\item[3] After coming up with these solutions, we chose the best possible solution that solved the problem in the most efficient way for our prototype.
-\item[4] Testing the solution is the last step in the engineering design algorithm and hence, we performed various tests on the vehicle, tweaked it to make it more functional and tested it on many test cases as necessary. 
-\end{itemize}
 \newpage
-
 \section{Building the Robot}
 
 
@@ -207,8 +197,8 @@ There are also two small sections that explain how the car recognizes the end of
 
 \begin{figure}[hbp]
 \centering
-\includegraphics[width=0.4\textwidth, height = 4cm]{images/perspective_transform.jpg}
-\caption{\label{fig:5}Test track for the vehicle with curved corners\\Source: \protect\url{http://bit.ly/1PTRAGf}}
+\includegraphics[width=0.6\textwidth, height = 6cm]{images/road.jpg}
+\caption{Test track for the vehicle with curved corners}
 \end{figure}
 
 \subsection{Thresholding}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.3)  5 JUL 2022 00:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.3)  5 JUL 2022 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -759,291 +759,289 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/devin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-<images/Chassis.jpg, id=111, 523.9575pt x 523.9575pt>
+{C:/Users/devin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<images/Chassis.jpg, id=99, 523.9575pt x 523.9575pt>
 File: images/Chassis.jpg Graphic file (type jpg)
 <use images/Chassis.jpg>
-Package pdftex.def Info: images/Chassis.jpg  used on input line 111.
+Package pdftex.def Info: images/Chassis.jpg  used on input line 101.
 (pdftex.def)             Requested size: 102.42836pt x 102.42314pt.
 
-Underfull \hbox (badness 1776) in paragraph at lines 112--112
+Underfull \hbox (badness 1776) in paragraph at lines 102--102
 []\OT1/cmr/m/n/10.95 (a) |Wheels, mo-tors
  []
 
-<images/rasp.jpg, id=112, 523.9575pt x 424.58624pt>
+<images/rasp.jpg, id=100, 523.9575pt x 424.58624pt>
 File: images/rasp.jpg Graphic file (type jpg)
 <use images/rasp.jpg>
-Package pdftex.def Info: images/rasp.jpg  used on input line 117.
+Package pdftex.def Info: images/rasp.jpg  used on input line 107.
 (pdftex.def)             Requested size: 102.42836pt x 82.99806pt.
-<images/bridge.jpg, id=113, 523.9575pt x 496.85625pt>
+<images/bridge.jpg, id=101, 523.9575pt x 496.85625pt>
 File: images/bridge.jpg Graphic file (type jpg)
 <use images/bridge.jpg>
-Package pdftex.def Info: images/bridge.jpg  used on input line 123.
+Package pdftex.def Info: images/bridge.jpg  used on input line 113.
 (pdftex.def)             Requested size: 102.42836pt x 97.12538pt.
-<images/cameraPi.jpg, id=114, 4047.12pt x 3035.34pt>
+<images/cameraPi.jpg, id=102, 4047.12pt x 3035.34pt>
 File: images/cameraPi.jpg Graphic file (type jpg)
 <use images/cameraPi.jpg>
-Package pdftex.def Info: images/cameraPi.jpg  used on input line 129.
+Package pdftex.def Info: images/cameraPi.jpg  used on input line 119.
 (pdftex.def)             Requested size: 102.42836pt x 76.79109pt.
-<images/powerbank.jpg, id=115, 328.97906pt x 328.97906pt>
+<images/powerbank.jpg, id=103, 328.97906pt x 328.97906pt>
 File: images/powerbank.jpg Graphic file (type jpg)
 <use images/powerbank.jpg>
-Package pdftex.def Info: images/powerbank.jpg  used on input line 135.
+Package pdftex.def Info: images/powerbank.jpg  used on input line 125.
 (pdftex.def)             Requested size: 102.42836pt x 102.4242pt.
-<images/batterie.jpg, id=116, 1004.75375pt x 1004.75375pt>
+<images/batterie.jpg, id=104, 1004.75375pt x 1004.75375pt>
 File: images/batterie.jpg Graphic file (type jpg)
 <use images/batterie.jpg>
-Package pdftex.def Info: images/batterie.jpg  used on input line 141.
+Package pdftex.def Info: images/batterie.jpg  used on input line 131.
 (pdftex.def)             Requested size: 102.42836pt x 102.42833pt.
-<images/switch.jpg, id=117, 602.25pt x 602.25pt>
+<images/switch.jpg, id=105, 602.25pt x 602.25pt>
 File: images/switch.jpg Graphic file (type jpg)
 <use images/switch.jpg>
-Package pdftex.def Info: images/switch.jpg  used on input line 147.
+Package pdftex.def Info: images/switch.jpg  used on input line 137.
 (pdftex.def)             Requested size: 102.42836pt x 102.4271pt.
-<images/robot1.jpg, id=118, 4047.12pt x 3035.34pt>
+<images/robot1.jpg, id=106, 4047.12pt x 3035.34pt>
 File: images/robot1.jpg Graphic file (type jpg)
 <use images/robot1.jpg>
-Package pdftex.def Info: images/robot1.jpg  used on input line 160.
+Package pdftex.def Info: images/robot1.jpg  used on input line 150.
 (pdftex.def)             Requested size: 163.89162pt x 122.87502pt.
-<images/robotfront.jpg, id=119, 4047.12pt x 3035.34pt>
+<images/robotfront.jpg, id=107, 4047.12pt x 3035.34pt>
 File: images/robotfront.jpg Graphic file (type jpg)
 <use images/robotfront.jpg>
-Package pdftex.def Info: images/robotfront.jpg  used on input line 165.
+Package pdftex.def Info: images/robotfront.jpg  used on input line 155.
 (pdftex.def)             Requested size: 163.89162pt x 122.87502pt.
-<images/robotside.jpg, id=120, 4047.12pt x 3035.34pt>
+<images/robotside.jpg, id=108, 4047.12pt x 3035.34pt>
 File: images/robotside.jpg Graphic file (type jpg)
 <use images/robotside.jpg>
-Package pdftex.def Info: images/robotside.jpg  used on input line 170.
+Package pdftex.def Info: images/robotside.jpg  used on input line 160.
 (pdftex.def)             Requested size: 163.89162pt x 122.87502pt.
-[3 <./images/Chassis.jpg> <./images/rasp.jpg> <./images/bridge.jpg> <./images/cameraPi.jpg> <./images/powerbank.jpg> <./images/batterie.jpg> <./images/switch.jpg>]
-<images/schema.jpg, id=127, 1582.41188pt x 1084.05pt>
+[2 <./images/Chassis.jpg> <./images/rasp.jpg> <./images/bridge.jpg> <./images/cameraPi.jpg> <./images/powerbank.jpg> <./images/batterie.jpg> <./images/switch.jpg>]
+<images/schema.jpg, id=115, 1582.41188pt x 1084.05pt>
 File: images/schema.jpg Graphic file (type jpg)
 <use images/schema.jpg>
-Package pdftex.def Info: images/schema.jpg  used on input line 184.
+Package pdftex.def Info: images/schema.jpg  used on input line 174.
 (pdftex.def)             Requested size: 284.50795pt x 170.70569pt.
- [4 <./images/robot1.jpg> <./images/robotfront.jpg> <./images/robotside.jpg> <./images/schema.jpg>]
-<images/perspective_transform.jpg, id=134, 361.35pt x 101.78024pt>
-File: images/perspective_transform.jpg Graphic file (type jpg)
-<use images/perspective_transform.jpg>
-Package pdftex.def Info: images/perspective_transform.jpg  used on input line 210.
-(pdftex.def)             Requested size: 204.85786pt x 113.81757pt.
- [5 <./images/perspective_transform.jpg>]
-<images/normal2.jpg, id=144, 354.9511pt x 167.12437pt>
+ [3 <./images/robot1.jpg> <./images/robotfront.jpg> <./images/robotside.jpg> <./images/schema.jpg>]
+<images/road.jpg, id=122, 4047.12pt x 3035.34pt>
+File: images/road.jpg Graphic file (type jpg)
+<use images/road.jpg>
+Package pdftex.def Info: images/road.jpg  used on input line 200.
+(pdftex.def)             Requested size: 307.2879pt x 170.6726pt.
+ [4 <./images/road.jpg>]
+<images/normal2.jpg, id=129, 354.9511pt x 167.12437pt>
 File: images/normal2.jpg Graphic file (type jpg)
 <use images/normal2.jpg>
-Package pdftex.def Info: images/normal2.jpg  used on input line 224.
+Package pdftex.def Info: images/normal2.jpg  used on input line 214.
 (pdftex.def)             Requested size: 199.17204pt x 128.04607pt.
-<images/thres2.jpg, id=145, 362.10281pt x 166.37157pt>
+<images/thres2.jpg, id=130, 362.10281pt x 166.37157pt>
 File: images/thres2.jpg Graphic file (type jpg)
 <use images/thres2.jpg>
-Package pdftex.def Info: images/thres2.jpg  used on input line 232.
+Package pdftex.def Info: images/thres2.jpg  used on input line 222.
 (pdftex.def)             Requested size: 199.17372pt x 128.04555pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
-<images/road_endless_straight_vanishing.jpg, id=146, 602.25pt x 402.50375pt>
+<images/road_endless_straight_vanishing.jpg, id=131, 602.25pt x 402.50375pt>
 File: images/road_endless_straight_vanishing.jpg Graphic file (type jpg)
 <use images/road_endless_straight_vanishing.jpg>
-Package pdftex.def Info: images/road_endless_straight_vanishing.jpg  used on input line 245.
+Package pdftex.def Info: images/road_endless_straight_vanishing.jpg  used on input line 235.
 (pdftex.def)             Requested size: 170.71652pt x 114.09444pt.
+<images/perspective_transform.jpg, id=132, 361.35pt x 101.78024pt>
 File: images/perspective_transform.jpg Graphic file (type jpg)
 <use images/perspective_transform.jpg>
-Package pdftex.def Info: images/perspective_transform.jpg  used on input line 254.
+Package pdftex.def Info: images/perspective_transform.jpg  used on input line 244.
 (pdftex.def)             Requested size: 361.34912pt x 101.77997pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./images/normal2.jpg> <./images/thres2.jpg> <./images/road_endless_straight_vanishing.jpg>]
-<images/camera_perspective.png, id=153, 479.7925pt x 241.90375pt>
+[5 <./images/normal2.jpg> <./images/thres2.jpg> <./images/road_endless_straight_vanishing.jpg>]
+<images/camera_perspective.png, id=139, 479.7925pt x 241.90375pt>
 File: images/camera_perspective.png Graphic file (type png)
 <use images/camera_perspective.png>
-Package pdftex.def Info: images/camera_perspective.png  used on input line 265.
+Package pdftex.def Info: images/camera_perspective.png  used on input line 255.
 (pdftex.def)             Requested size: 153.64644pt x 77.46614pt.
-<images/points_warp.png, id=155, 480.79625pt x 237.88875pt>
+<images/points_warp.png, id=141, 480.79625pt x 237.88875pt>
 File: images/points_warp.png Graphic file (type png)
 <use images/points_warp.png>
-Package pdftex.def Info: images/points_warp.png  used on input line 273.
+Package pdftex.def Info: images/points_warp.png  used on input line 263.
 (pdftex.def)             Requested size: 153.64644pt x 76.02068pt.
-<images/birds_eye_view.png, id=156, 481.8pt x 241.40187pt>
+<images/birds_eye_view.png, id=142, 481.8pt x 241.40187pt>
 File: images/birds_eye_view.png Graphic file (type png)
 <use images/birds_eye_view.png>
-Package pdftex.def Info: images/birds_eye_view.png  used on input line 281.
+Package pdftex.def Info: images/birds_eye_view.png  used on input line 271.
 (pdftex.def)             Requested size: 153.64644pt x 76.98128pt.
-<images/base.jpg, id=157, 360.59718pt x 182.93344pt>
+<images/base.jpg, id=143, 360.59718pt x 182.93344pt>
 File: images/base.jpg Graphic file (type jpg)
 <use images/base.jpg>
-Package pdftex.def Info: images/base.jpg  used on input line 294.
+Package pdftex.def Info: images/base.jpg  used on input line 284.
 (pdftex.def)             Requested size: 227.62204pt x 115.47476pt.
- [7 <./images/camera_perspective.png> <./images/points_warp.png> <./images/birds_eye_view.png> <./images/base.jpg>]
-<images/madFunction.png, id=169, 930.47626pt x 774.895pt>
+ [6 <./images/perspective_transform.jpg> <./images/camera_perspective.png> <./images/points_warp.png> <./images/birds_eye_view.png> <./images/base.jpg>]
+<images/madFunction.png, id=154, 930.47626pt x 774.895pt>
 File: images/madFunction.png Graphic file (type png)
 <use images/madFunction.png>
-Package pdftex.def Info: images/madFunction.png  used on input line 309.
+Package pdftex.def Info: images/madFunction.png  used on input line 299.
 (pdftex.def)             Requested size: 227.62204pt x 189.56125pt.
-<images/logx.png, id=170, 930.47626pt x 773.89125pt>
+<images/logx.png, id=155, 930.47626pt x 773.89125pt>
 File: images/logx.png Graphic file (type png)
 <use images/logx.png>
-Package pdftex.def Info: images/logx.png  used on input line 318.
+Package pdftex.def Info: images/logx.png  used on input line 308.
 (pdftex.def)             Requested size: 227.62204pt x 189.3157pt.
- [8 <./images/madFunction.png>]
-<images/normal.jpg, id=179, 355.3275pt x 166.74797pt>
+ [7 <./images/madFunction.png>]
+<images/normal.jpg, id=165, 355.3275pt x 166.74797pt>
 File: images/normal.jpg Graphic file (type jpg)
 <use images/normal.jpg>
-Package pdftex.def Info: images/normal.jpg  used on input line 336.
+Package pdftex.def Info: images/normal.jpg  used on input line 326.
 (pdftex.def)             Requested size: 153.64644pt x 72.10477pt.
-<images/thres.jpg, id=180, 359.09157pt x 165.99516pt>
+<images/thres.jpg, id=166, 359.09157pt x 165.99516pt>
 File: images/thres.jpg Graphic file (type jpg)
 <use images/thres.jpg>
-Package pdftex.def Info: images/thres.jpg  used on input line 344.
+Package pdftex.def Info: images/thres.jpg  used on input line 334.
 (pdftex.def)             Requested size: 153.64644pt x 71.02698pt.
-<images/warp.jpg, id=181, 351.93985pt x 173.14688pt>
+<images/warp.jpg, id=167, 351.93985pt x 173.14688pt>
 File: images/warp.jpg Graphic file (type jpg)
 <use images/warp.jpg>
-Package pdftex.def Info: images/warp.jpg  used on input line 352.
+Package pdftex.def Info: images/warp.jpg  used on input line 342.
 (pdftex.def)             Requested size: 153.64644pt x 75.59041pt.
-<images/warptr.jpg, id=182, 359.09157pt x 191.21437pt>
+<images/warptr.jpg, id=168, 359.09157pt x 191.21437pt>
 File: images/warptr.jpg Graphic file (type jpg)
 <use images/warptr.jpg>
-Package pdftex.def Info: images/warptr.jpg  used on input line 363.
+Package pdftex.def Info: images/warptr.jpg  used on input line 353.
 (pdftex.def)             Requested size: 153.64644pt x 81.81793pt.
 File: images/base.jpg Graphic file (type jpg)
 <use images/base.jpg>
-Package pdftex.def Info: images/base.jpg  used on input line 371.
+Package pdftex.def Info: images/base.jpg  used on input line 361.
 (pdftex.def)             Requested size: 153.64644pt x 77.94525pt.
-<images/final.jpg, id=183, 354.9511pt x 180.675pt>
+<images/final.jpg, id=169, 354.9511pt x 180.675pt>
 File: images/final.jpg Graphic file (type jpg)
 <use images/final.jpg>
-Package pdftex.def Info: images/final.jpg  used on input line 379.
+Package pdftex.def Info: images/final.jpg  used on input line 369.
 (pdftex.def)             Requested size: 153.64644pt x 78.20978pt.
- [9 <./images/logx.png> <./images/normal.jpg> <./images/thres.jpg> <./images/warp.jpg> <./images/warptr.jpg> <./images/final.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+ [8 <./images/logx.png> <./images/normal.jpg> <./images/thres.jpg> <./images/warp.jpg> <./images/warptr.jpg> <./images/final.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
-<images/stopimg.jpg, id=193, 4047.12pt x 3035.34pt>
+<images/stopimg.jpg, id=179, 4047.12pt x 3035.34pt>
 File: images/stopimg.jpg Graphic file (type jpg)
 <use images/stopimg.jpg>
-Package pdftex.def Info: images/stopimg.jpg  used on input line 398.
+Package pdftex.def Info: images/stopimg.jpg  used on input line 388.
 (pdftex.def)             Requested size: 199.16928pt x 149.36748pt.
-[10 <./images/stopimg.jpg>]
-<images/haar1.png, id=199, 1366.10374pt x 838.13126pt>
+[9 <./images/stopimg.jpg>]
+<images/haar1.png, id=185, 1366.10374pt x 838.13126pt>
 File: images/haar1.png Graphic file (type png)
 <use images/haar1.png>
-Package pdftex.def Info: images/haar1.png  used on input line 410.
+Package pdftex.def Info: images/haar1.png  used on input line 400.
 (pdftex.def)             Requested size: 227.62204pt x 139.6413pt.
-<images/haar2.png, id=200, 1268.74pt x 773.89125pt>
+<images/haar2.png, id=186, 1268.74pt x 773.89125pt>
 File: images/haar2.png Graphic file (type png)
 <use images/haar2.png>
-Package pdftex.def Info: images/haar2.png  used on input line 421.
+Package pdftex.def Info: images/haar2.png  used on input line 411.
 (pdftex.def)             Requested size: 204.85672pt x 124.94695pt.
-<images/haar3.png, id=201, 1235.61626pt x 887.315pt>
+<images/haar3.png, id=187, 1235.61626pt x 887.315pt>
 File: images/haar3.png Graphic file (type png)
 <use images/haar3.png>
-Package pdftex.def Info: images/haar3.png  used on input line 429.
+Package pdftex.def Info: images/haar3.png  used on input line 419.
 (pdftex.def)             Requested size: 204.85672pt x 147.10469pt.
-<images/haar4.png, id=202, 1236.62pt x 876.27374pt>
+<images/haar4.png, id=188, 1236.62pt x 876.27374pt>
 File: images/haar4.png Graphic file (type png)
 <use images/haar4.png>
-Package pdftex.def Info: images/haar4.png  used on input line 441.
+Package pdftex.def Info: images/haar4.png  used on input line 431.
 (pdftex.def)             Requested size: 142.26378pt x 100.80278pt.
-<images/haar5.png, id=203, 1419.3025pt x 698.61pt>
+<images/haar5.png, id=189, 1419.3025pt x 698.61pt>
 File: images/haar5.png Graphic file (type png)
 <use images/haar5.png>
-Package pdftex.def Info: images/haar5.png  used on input line 449.
+Package pdftex.def Info: images/haar5.png  used on input line 439.
 (pdftex.def)             Requested size: 184.9429pt x 91.02502pt.
- [11 <./images/haar1.png> <./images/haar2.png> <./images/haar3.png>]
-<images/haar6.png, id=213, 584.1825pt x 398.48875pt>
+ [10 <./images/haar1.png> <./images/haar2.png> <./images/haar3.png>]
+<images/haar6.png, id=199, 584.1825pt x 398.48875pt>
 File: images/haar6.png Graphic file (type png)
 <use images/haar6.png>
-Package pdftex.def Info: images/haar6.png  used on input line 464.
+Package pdftex.def Info: images/haar6.png  used on input line 454.
 (pdftex.def)             Requested size: 204.85672pt x 139.74069pt.
-<images/haar7.png, id=214, 592.2125pt x 384.43625pt>
+<images/haar7.png, id=200, 592.2125pt x 384.43625pt>
 File: images/haar7.png Graphic file (type png)
 <use images/haar7.png>
-Package pdftex.def Info: images/haar7.png  used on input line 472.
+Package pdftex.def Info: images/haar7.png  used on input line 462.
 (pdftex.def)             Requested size: 204.85672pt x 132.9826pt.
-<images/haar8.png, id=215, 1196.47pt x 730.73pt>
+<images/haar8.png, id=201, 1196.47pt x 730.73pt>
 File: images/haar8.png Graphic file (type png)
 <use images/haar8.png>
-Package pdftex.def Info: images/haar8.png  used on input line 485.
+Package pdftex.def Info: images/haar8.png  used on input line 475.
 (pdftex.def)             Requested size: 204.85672pt x 125.11446pt.
-<images/haar9.png, id=216, 1257.69875pt x 818.05624pt>
+<images/haar9.png, id=202, 1257.69875pt x 818.05624pt>
 File: images/haar9.png Graphic file (type png)
 <use images/haar9.png>
-Package pdftex.def Info: images/haar9.png  used on input line 493.
+Package pdftex.def Info: images/haar9.png  used on input line 483.
 (pdftex.def)             Requested size: 204.85672pt x 133.23839pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/haar10.png, id=217, 1266.7325pt x 889.3225pt>
+<images/haar10.png, id=203, 1266.7325pt x 889.3225pt>
 File: images/haar10.png Graphic file (type png)
 <use images/haar10.png>
-Package pdftex.def Info: images/haar10.png  used on input line 504.
+Package pdftex.def Info: images/haar10.png  used on input line 494.
 (pdftex.def)             Requested size: 284.52756pt x 199.74968pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./images/haar4.png> <./images/haar5.png> <./images/haar6.png> <./images/haar7.png>] [13 <./images/haar8.png> <./images/haar9.png> <./images/haar10.png>]
-<images/3D_distance.png, id=239, 771.88374pt x 299.1175pt>
+[11 <./images/haar4.png> <./images/haar5.png> <./images/haar6.png> <./images/haar7.png>] [12 <./images/haar8.png> <./images/haar9.png> <./images/haar10.png>]
+<images/3D_distance.png, id=224, 771.88374pt x 299.1175pt>
 File: images/3D_distance.png Graphic file (type png)
 <use images/3D_distance.png>
-Package pdftex.def Info: images/3D_distance.png  used on input line 522.
+Package pdftex.def Info: images/3D_distance.png  used on input line 512.
 (pdftex.def)             Requested size: 284.52756pt x 110.2564pt.
- [14 <./images/3D_distance.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 531--532
+ [13 <./images/3D_distance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 521--522
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 534.
+(hyperref)                removing `math shift' on input line 524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 534.
+(hyperref)                removing `math shift' on input line 524.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 550--552
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
 []$\OT1/cmtt/m/n/14.4 https : / / www . cs . cmu . edu / []efros / courses / LBMV07 / Papers /
  []
 
 
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 554--556
+Overfull \hbox (14.22635pt too wide) in paragraph at lines 544--546
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--556
+Underfull \hbox (badness 10000) in paragraph at lines 544--546
 
  []
 
-[16] (main.aux)
+[15] (main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 53F61DCFE0A0319495146BA114BCBEEB;3707.
+(rerunfilecheck)             Checksum: 60E8ED5293E97F3F6CFFB5BE563BE55A;3377.
  ) 
 Here is how much of TeX's memory you used:
  40610 strings out of 478351
- 928173 string characters out of 2846868
- 1455132 words of memory out of 3000000
- 58452 multiletter control sequences out of 15000+600000
- 480863 words of font info for 73 fonts, out of 8000000 for 9000
+ 928213 string characters out of 2846868
+ 1455021 words of memory out of 3000000
+ 58454 multiletter control sequences out of 15000+600000
+ 480694 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,10n,106p,1408b,676s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 108i,10n,106p,1408b,640s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\devin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1440.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (16 pages, 50706929 bytes).
+Output written on main.pdf (15 pages, 56385640 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 387 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 313 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
 
