@@ -10,7 +10,20 @@ def thresholding(img):
     maskWhite = cv2.inRange(imgHsv,lowerWhite,upperWhite)
     return maskWhite
 
-
+'''
+def thresholding1(img):
+    # otsu thresholding
+    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    blur = cv2.GaussianBlur(gray,(3,3),cv2.BORDER_DEFAULT)
+    _, otsu = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    # removing illumination noise by selecting colors with high lightness value
+    img = cv2.GaussianBlur(img,(5,5),cv2.BORDER_DEFAULT)
+    imgHls = cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
+    lowerWhite = np.array([0,255,0])
+    upperWhite = np.array([179,255,255])
+    maskWhite = cv2.inRange(imgHls,lowerWhite,upperWhite)
+    return otsu - maskWhite
+    '''
 def warpImg(img,points,w,h,inv = False):
     pts1 = np.float32(points)
     pts2 =  np.float32([[0,0],[w,0],[0,h],[w,h]])
@@ -124,7 +137,7 @@ def stopDetector(img,cascadePath, minArea):
 
 def distance_to_camera(perWidth):
     # https://pyimagesearch.com/2015/01/19/find-distance-camera-objectmarker-using-python-opencv/
-	# compute and return the distance from the marker to the camera
+    # compute and return the distance from the marker to the camera
     knownWidth = 4.5 # width stop sign
     focalLength = 330 # mm to be obtained
     '''
