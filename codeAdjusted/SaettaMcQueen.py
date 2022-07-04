@@ -3,7 +3,6 @@ import utils
 from MotorModule import Motor
 import RoadModule as Rm
 import cv2, numpy as np
-from time import sleep
 
 ##################################################
 motor = Motor(2,3,4,16,20,21)
@@ -61,8 +60,7 @@ def trip():
 
 
 def turnAround():
-    res = cv2.VideoWriter('turnarounddd.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
-    #print('ahahahhha')
+    #res = cv2.VideoWriter('turnarounddd.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
     motor.move(0.2, 0, 0.42)
     motor.stop()
     sleep(1)
@@ -80,7 +78,6 @@ def turnAround():
             eagleView = utils.warpImg(imgThres,points,wT,hT)
 
             if not Rm.RoadEnded(eagleView,0.3):
-                print('yes')
                 motor.stop()
                 break
     #res.release()
