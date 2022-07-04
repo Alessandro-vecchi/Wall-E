@@ -92,7 +92,7 @@ As engineers, we take on the task of designing a new device with a unique approa
 
 The main idea was to build a small car that was able to see. To achieve all the tasks needed for such a robot, we made the following shopping list: 
 \begin{itemize}
-  \item 3 big batteries for powering the motors (3.7V each one).
+  \item 3 big batteries for powering the motors (3.7V each one) and a switch.
   \item 1 Powerbank to power the Raspberry.
   \item 4 DC motors and wheels.
   \item A two-level chassis made of plastic plates to accomodate all the devices.
@@ -121,13 +121,13 @@ Let's see how those components look:
   \begin{subfigure}{0.2\textwidth}
     \centering
     \includegraphics[width = \textwidth]{images/bridge.jpg}
-    \caption{L298n Motor Driver}
+    \caption{L298n Driver}
     \label{fig:right}
     \end{subfigure}
   \begin{subfigure}{0.2\textwidth}
     \centering
-    \includegraphics[width = \textwidth]{images/batterie.jpg}
-    \caption{Motor's batteries}
+    \rotatebox[origin=c]{270}{\includegraphics[width = \textwidth]{images/cameraPi.jpg}}
+    \caption{The camera}
     \label{fig:right}
     \end{subfigure}
   \begin{subfigure}{0.2\textwidth}
@@ -142,62 +142,53 @@ Let's see how those components look:
     \caption{Motor's batteries}
     \label{fig:right}
     \end{subfigure}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/switch.jpg}
+    \caption{Power switch}
+    \label{fig:right}
+    \end{subfigure}
   \label{fig:combined}
 \end{figure}
 
 \subsection{Assembling all the parts}
-Now it's time to give a sense to this pile of stuff, and mount all the components together. On the bottom level of the robot will be located the two power sources, batteries and powerbank, along with the l298n driver. On the top level will sit the Raspberry and the camera mounted on the 3D-printed support. Here's a picture of the complete robot:
+Now it's time to give a sense to this pile of stuff, and mount all the components together. On the bottom level of the robot will be located the two power sources, batteries and powerbank, along with the l298n driver. On the top level will sit the Raspberry and the camera mounted on a 3D-printed support. Here's some pictures of the complete robot:
 \begin{figure}[hb]
 \centering
-\begin{subfigure}{0.4\textwidth}
+\begin{subfigure}{0.32\textwidth}
   \centering
-  \includegraphics[width = \textwidth]{images/car1.jpg}
+  \rotatebox[origin=c]{270}{\includegraphics[width = \textwidth]{images/robot1.jpg}}
   \label{fig:right}
   \end{subfigure}
-\begin{subfigure}{0.4\textwidth}
+\begin{subfigure}{0.32\textwidth}
   \centering
-  \includegraphics[width = \textwidth]{images/car2.jpg}
+  \rotatebox[origin=c]{270}{\includegraphics[width = \textwidth]{images/robotfront.jpg}}
+  \label{fig:right}
+  \end{subfigure}
+\begin{subfigure}{0.32\textwidth}
+  \centering
+  \rotatebox[origin=c]{270}{\includegraphics[width = \textwidth]{images/robotside.jpg}}
   \label{fig:right}
   \end{subfigure}
 \end{figure}
 
-\subsection{Resistors}
+\subsection{Wirings}
 
-Resistors are a chief electrical component in circuits - they are used to reduce current flow and at the same time maintain low voltage levels  to prevent short circuits and provide the required current flow in simple circuits. In our project we have used these resistors in several points in the circuit accordingly. The resistance values used in our circuits are - $~~~~~ADD ~~R~~ VALUES ~~HERE~~~~$\\
-
-
-\subsection{Capacitors}
-
-Capacitors are also an essential part of electronic circuits. It's formally defined as a passive two-terminal electrical component used to store electrical energy temporarily in an electric field. We used capacitors in our project in places according to a pre-designed circuit. (ECE 110 gives preliminary circuit component study) The capacitance values used in our circuit are - $~~~~~ADD ~~C~~ VALUES ~~HERE~~~~$
-
-\subsection{Microphone}
-
-A microphone is formally defined as an acoustic-to-electric transducer or simply, a sensor that can convert audio signals to electric signals. In our project we used the microphone to detect a clap - essentially a large pressure variation - from its environment and move or stop the vehicle. To control this, we used our own code using the Arduino. (\textit{code posted below})
-\subsection{RedBot Sensors}
-
-The RedBot sensor works by detecting reflected light coming from its own Infrared LED. By measuring the amount of reflected light it can detect transitions from dark to light lines and even objects directly in front of it. The sensor has a 3-pin head which connects directly to the Arduino using female-female jumper cables. For our project, we had to write code compatible with our project requirements and hence used the RedBot library to detect lines or objects. \\
-
-An image of the sensor and the data-readings (the characteristic) as a function of its distance from white paper is attached below. 
-
-\begin{figure} [hbp]
-\centering
-  \begin{subfigure}[b]{0.4\textwidth}
+The three blue batteries situated at the bottom level are linked to a switch accessible from below, so that one can turn off/on the power source of the motors whenever needed,useful for saving energy and batteries' lifetime.
+The switch is then connected to the l298n Driver, that take as input two 6 cables (3 for pairs of motors, since the ones on the same side have to work in the same way) connected to the rapsberry pi GPIO (General Purpose Input Output) pins.
+In the code the 3 cables/pins are refered as "En" "In1" "In2", that stands for Enable, Input One and Input Two. The first is for activation, and the remaining two for deciding the direction, forward or backward.
+The raspberry is instead powered by a common smarthpone powerbank, via USB-C cable.
+The following is a picture of the wiring schema for the motors: 
+\begin{figure}[h!]
   \centering
-  \captionsetup{justification=centering}
-    \includegraphics[width=4cm, height = 6cm]{images/perspective_transform.jpg}
-    \caption{Image of the sensor \\Source \protect\url{http://bit.ly/1LFJ5Xr}}
-   
-  \end{subfigure}
-  \hspace{1cm}
-  \begin{subfigure}[b]{0.4\textwidth}
-  \centering
-  \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
-    \caption{Characterization of the sensor \\(generated with Octave)}
-    
-  \end{subfigure}
-  \caption{RedBot sensor diagram and Characterization}
+  \includegraphics[width = 10cm,height=6cm]{images/schema.jpg}
+  \label{fig:schema}
 \end{figure}
+
+\subsection{How to Turn}
+
+The wheels can just go forward or backward, no steering device is present. Therefore the car, in order to turn left and right, will apply a difference of speed between right and left side, similarly to tanks and other tracked vehicle.
+For istance, if we want to go left, we'll set the speed of the right wheels higher than the speed of the left wheels and viceversa.
 
 \section{Lane detection with Image processing}
 

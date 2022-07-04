@@ -1068,13 +1068,13 @@ INPUT .\images\bridge.jpg
 INPUT .\images\bridge.jpg
 INPUT .\images\bridge.jpg
 INPUT .\images\bridge.jpg
-INPUT .\images\batterie.jpg
-INPUT .\images\batterie.jpg
-INPUT images\batterie.jpg
-INPUT .\images\batterie.jpg
-INPUT .\images\batterie.jpg
-INPUT .\images\batterie.jpg
-INPUT .\images\batterie.jpg
+INPUT .\images\cameraPi.jpg
+INPUT .\images\cameraPi.jpg
+INPUT images\cameraPi.jpg
+INPUT .\images\cameraPi.jpg
+INPUT .\images\cameraPi.jpg
+INPUT .\images\cameraPi.jpg
+INPUT .\images\cameraPi.jpg
 INPUT .\images\powerbank.jpg
 INPUT .\images\powerbank.jpg
 INPUT images\powerbank.jpg
@@ -1086,21 +1086,44 @@ INPUT .\images\batterie.jpg
 INPUT .\images\batterie.jpg
 INPUT images\batterie.jpg
 INPUT .\images\batterie.jpg
-INPUT .\images\car1.jpg
-INPUT .\images\car1.jpg
-INPUT images\car1.jpg
-INPUT .\images\car1.jpg
-INPUT .\images\car1.jpg
-INPUT .\images\car1.jpg
-INPUT .\images\car1.jpg
-INPUT .\images\car2.jpg
-INPUT .\images\car2.jpg
-INPUT images\car2.jpg
-INPUT .\images\car2.jpg
-INPUT .\images\car2.jpg
-INPUT .\images\car2.jpg
-INPUT .\images\car2.jpg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
+INPUT .\images\batterie.jpg
+INPUT .\images\batterie.jpg
+INPUT .\images\batterie.jpg
+INPUT .\images\switch.jpg
+INPUT .\images\switch.jpg
+INPUT images\switch.jpg
+INPUT .\images\switch.jpg
+INPUT .\images\switch.jpg
+INPUT .\images\switch.jpg
+INPUT .\images\switch.jpg
+INPUT .\images\robot1.jpg
+INPUT .\images\robot1.jpg
+INPUT images\robot1.jpg
+INPUT .\images\robot1.jpg
+INPUT .\images\robot1.jpg
+INPUT .\images\robot1.jpg
+INPUT .\images\robot1.jpg
+INPUT .\images\robotfront.jpg
+INPUT .\images\robotfront.jpg
+INPUT images\robotfront.jpg
+INPUT .\images\robotfront.jpg
+INPUT .\images\robotfront.jpg
+INPUT .\images\robotfront.jpg
+INPUT .\images\robotfront.jpg
+INPUT .\images\robotside.jpg
+INPUT .\images\robotside.jpg
+INPUT images\robotside.jpg
+INPUT .\images\robotside.jpg
+INPUT .\images\robotside.jpg
+INPUT .\images\robotside.jpg
+INPUT .\images\robotside.jpg
+INPUT .\images\schema.jpg
+INPUT .\images\schema.jpg
+INPUT images\schema.jpg
+INPUT .\images\schema.jpg
+INPUT .\images\schema.jpg
+INPUT .\images\schema.jpg
+INPUT .\images\schema.jpg
 INPUT .\images\perspective_transform.jpg
 INPUT .\images\perspective_transform.jpg
 INPUT images\perspective_transform.jpg
@@ -1108,10 +1131,10 @@ INPUT .\images\perspective_transform.jpg
 INPUT .\images\perspective_transform.jpg
 INPUT .\images\perspective_transform.jpg
 INPUT .\images\perspective_transform.jpg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
@@ -1126,20 +1149,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT .\images\perspective_transform.jpg
 INPUT .\images\perspective_transform.jpg
 INPUT images\perspective_transform.jpg
@@ -1250,9 +1259,5 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
