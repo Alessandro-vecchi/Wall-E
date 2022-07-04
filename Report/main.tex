@@ -463,37 +463,12 @@ Therefore we can see how the width of the STOP seen from the camera is correlate
 So, once found the focal length of the camera by fixing the focal distance of the STOP sign, we can compute the space between them by inserting the width of the perceived image in the formula above, together with the now fixed W and focal length. If the distance from the STOP is between 10cm and 15cm, the car stops, in all other cases go straight.
 
 
-
-\section{Code}
-
-The next code will be directly imported from a file (Random Code now)
-\lstinputlisting[language=python]{../pedestrianDetection/StopDetection.py}
-
-
 \section{Conclusion}
-After designing the circuit required, assembling the circuit on the breadboard and having tested in multiple times with many test cases, we could build our autonomous vehicle which followed the white line track and switched mobility based on the claps from the environment just like a semi-autonomous vehicle! \\
-\begin{figure}[!hbp]
-\centering
-  \begin{subfigure}[b]{0.4\textwidth}
-  \centering
-  \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
-    \caption{Front-Side view of chassis w/ circuit\\ (Redbot sensors attached)}
-    \label{fig:g1}
-  \end{subfigure}
-  \hspace{1cm}
-  \begin{subfigure}[b]{0.4\textwidth}
-  \centering
-  \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
-    \caption{Side view of chassis \\(Motor, Arduino, Circuit visible)}
-    \label{fig:g2}
-  \end{subfigure}
-  \caption{Photos of Final Lab Project}
-\end{figure}
+After building the vehicle and preparing the path, having written the code for the image processing lane detection and having tested it multiple times,  we can officially say that we manage to build a self-driving car which is able to predict the trajectory to take and is able to STOP in proximity of a STOP signal, almost like a real autonomous vehicle! \\
+
 
 \section{Self-Evaluation $\&$ Future Projects}
-We can say with utmost certainty that the takeaway from a project like this is definitely going to help in the future. Having designed an autonomous vehicles moving with cues from its environment we feel equipped with the tools to learn more about circuits and implement more complex circuits. Having learnt about using Microcontrollers, simple electrical components, microphones, and RedBot sensors, we are planning to take this project further by adding more sensors to improve and increase functionality. One idea for a future project is to add a heat sensor so that the car can move in a direction with a depression on the heat map - we plan on doing this using concepts of computer vision and machine learning to analyze the heat map and finding the minima on the map; a potential application of this is that the vehicle and autonomously change directions in case of a fire. Indeed, a project like this will be a great learning experience just like our final project was. \\
+We can say with utmost certainty that the takeaway from a project like this is definitely going to help in the future. Having designed an autonomous vehicle we feel equipped with the tools to learn more about Computer Vision and we are heading to further improve this project next year during the deep learning course, by implementing the lane detection with Neural Networks and by adding more knowledge tothe world, like our beloved semaphore recognition and pedestrian detection. We could also add vocal command during the NLP course, by simply telling it order with our voice. We can basically add any sort of things to make the project cooler and we can't wait to improve it further. Indeed, a project like this will be a great learning experience just like our final project was. \\
 
 \subsection{Finding the curve}
 We are at the core of our lane detection program. We have a black and white road seen from above and our car manage to drive in the center of the road. What we have to determine now is how do we find curves.\\
@@ -503,23 +478,17 @@ To get a grasp of what I mean imagine a frame of the road with a curve towards t
 
 \section{References}
 \begin{itemize}
-\item[1] SparkFun - Flex Sensor\\ \url{https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/FLEXSENSORREVA1.pdf}
-\item[2] ECE 110 - Experiment 9 - Navigation\\
-\url{https://courses.engr.illinois.edu/ece110/fa2015/content/labs/Experiments/experiment.9.procedures.FA15.v10.pdf}
-\item[3] RedBoard by SparkFun - Programmed with Arduino\\
-\url{http://www.robotgear.com.au/Product.aspx/Details/733-RedBoard-by-SparkFun-Programmed-with-Arduino}
-\item[4]  2N5192G ON Semiconductor | Mouser \\
-\url{http://www.mouser.com/ProductDetail/ON-Semiconductor/2N5192G/?qs=vLkC5FC1VN$\%2Fa3d2jm7wSkw\%3D\%$3D}
-\item[5] Sensors\\
-\url{http://ixda.gatech.edu/resources/files/scott-sensors.pdf}
-\item[6] Resistor - Wikipedia, the free encyclopedia\\
-\url{https://en.wikipedia.org/wiki/Resistor}
-\item[7] Capacitor - Wikipedia, the free encyclopedia\\
-\url{https://en.wikipedia.org/wiki/Capacitor}
-\item[8] Ceramic Capacitor $>>$ Capacitor Guide\\
-http://www.capacitorguide.com/ceramic-capacitor/
-\item[9] Transistor - Wikipedia, the free encyclopedia\\
-\url{https://en.wikipedia.org/wiki/Transistor}
+\item[1] Thresholding - OpenCV - Documentation\\ \url{https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html}
+\item[2] Warp perspective - OpenCV - Documentation\\
+\urlhttps://docs.opencv.org/4.x/da/d54/group__imgproc__transform.html}
+\item[3] Color spaces - OpenCV - Documentation\\
+\url{https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html}
+\item[4]  Focal length | Youtube and links on Code \\
+\url{https://www.youtube.com/watch?v=4CoEsqePADw}
+\item[5] Haar features - Wikipedia, the free encyclopedia\\
+\url{https://en.wikipedia.org/wiki/Haar-like_feature}
+\item[6] Haar Cascade - Columbia University\\
+\url{https://fpcv.cs.columbia.edu}
 \end{itemize}
 
 \noindent\rule{18.5cm}{0.4pt}
