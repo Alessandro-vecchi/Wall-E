@@ -203,6 +203,8 @@ In order to reach this goal we are going to divide the task in 5 different steps
   \item[5] Hardware implementation.
   \end{itemize}
 
+There are also two small sections that explain how the car recognizes the end of the road and how it makes a U-turn after the first lap.
+
 \begin{figure}[hbp]
 \centering
 \includegraphics[width=0.4\textwidth, height = 4cm]{images/perspective_transform.jpg}
@@ -330,15 +332,39 @@ Moreover, even if small, there is a chance that the car can stop if we just dete
 \subsection{How to turn around}
 Once the end of the first round is detected, the car start turning back. The way it does that it's by giving a different power to the left and right motor. This allows the car to turn on itself till the camera detect the track again.\\
 
+
 \section{Stop recognition using Haar Cascade Classifier}
+After searching for a week for LEGO's STOP signals, we manage to print them in 3D and the result is even better.\par
+\begin{figure} [!h]
+  \centering
+  \captionsetup{justification=centering}
+  \includegraphics[width=8cm]{images/logx.png}
+  \caption{3D printed STOP signals}
+  \end{figure}
+To detect them we tried firstly to use SIFT and ORB as matching tecniques, as we did in class, but unfortunately the sign posts had a too low number of relevant descriptors to be of any use.
+Then we tried a couple of machine learning techniques that could have revealed interesting, like logistic regression and a multi-layer perceptron, but we didn't manage to achieve a decent accuracy with them, it was always around 65\%.
+Finally, we encountered the Haar feature-based Cascade classifier, which is a machine learning based approach where a cascade function is trained from a lot of positive and negative images. It is then used to detect objects in other images. With it we managed to achieve a really good accuracy and our car manage to detect the STOP signs flawlessly. Let's now briefly explain how this classifier works.
+\subsection{Haar Cascade classifier}
 
 \subsection{}
 
 \subsection{}
 
-\subsection{}
+\subsection{STOP implementation in our car}
+We now know the algorithm that recognizes the sign posts. It returns the position of the top-left bounding box rectangle of the stop signal and its width and height if something is detected, otherwise it returns an emtpy list. Reasonably enough, in order to tell the car that something has been detected we can just verify if the list is empty or not. However in this way, even if the accuracy of our algorithm is pretty high, we're not really sure if that thing that has been detected is a STOP or a false positive. Therefore it would be safer to set a mini-batch that verify that at least the $x$\% of it contains detected frames. And this method works pretty well, it only stops in front of stop posts. But the problem is that it often stops more than once in a row. What I mean is that it detects the sign, it stops and then restart searching for STOP signals and it re-stop. We could change manually the threshold of the number of stops detected, but it's not a smart way of solving the problem, even if it is almost always solved. If it start detecting to late or too early, it can fail to recognize the STOP or halt too far from it. We could make the car move for a certain distance before start searching again for STOP, but then in the improbable case that the sign post is in a curve it will go off-road.
+\subsubsection*{Where to STOP}
+Therefore the way we managed to solve the problem is by computing the distance from camera to the STOP sign. How do we do that? We will use the "triangle similarity" on the image seen in the camera. As we know, the way an image is formed in the camera follow the same principles of the human eye. Rays of light reflected by the object pass through the lens  from a particular angle and the image is formed in the back side of the wall(the retina, in the case of the human eye). The main difference is that humans have two eyes which receives light at different angles, so they can see the world in three dimensions, while cameras have only one lens, which limits the dimensions to two. But don't worry, we can recover a pretty good estimate of the third distance from the focal length. It is the distance between the camera sensor and the optical center of the camera lens, which is the point where the light rays intercept and it's fixed for each type of lens. It determines the angle of incidence of the light, namely how close an object is from the camera.
 
-\subsection{Stop implementation in our car}
+\begin{figure} [!h]
+  \centering
+  \captionsetup{justification=centering}
+  \includegraphics[width=10cm]{images/3D_distance.png}
+  \caption{How to determine distance from the camera to an object}
+  \end{figure}
+
+Therefore we can see how the width of the STOP seen from the camera is correlated to its real distance from the camera. We can now compute the triangle similarity between the two triangles. Thus the focal length is $f = \frac{w * d}{W}$ and the distance from the object $d = \frac{W * f}{w}$, where $d$ is the focal distance, $w$ the width of the object in the image and $W$ its real length, as you can also see from the image above. We can interpret these results by noting that the focal length and the width of the real object are fixed distances and the smaller an object is in an image, the further it is in the real world. Hence $w*d$ will be always equal to the fixed value $f*D$, for a particular object and a given camera.
+So, once found the focal length of the camera by fixing the focal distance of the STOP sign, we can compute the space between them by inserting the width of the perceived image in the formula above, together with the now fixed W and focal length. If the distance from the STOP is between 10cm and 15cm, the car stops, in all other cases go straight.
+
 
 
 \section{Code}
