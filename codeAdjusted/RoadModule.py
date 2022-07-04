@@ -57,14 +57,14 @@ def getLaneCurve(img, display = 2):
     return smoothDist, streetEnded
 
 
-def RoadEnded(warpedImg):
+def RoadEnded(warpedImg,tr=0.17,a=0.5,b=1):
     h, w = warpedImg.shape[:2]
-    rowStart = int(0.4*h)
-    rowEnd = int(0.8*h)
+    rowStart = int(a*h)
+    rowEnd = int(b*h)
     nWhitePixelsFrame = warpedImg[rowStart:rowEnd].sum()/255
-    threshold = 0.02
     # less than the 2% of the stripe must be white
-    return nWhitePixelsFrame < threshold * (rowEnd-rowStart)*w
+    #print(nWhitePixelsFrame)
+    return nWhitePixelsFrame < tr * (rowEnd-rowStart)*w
 
 
 def smoothed(dist):
@@ -74,7 +74,7 @@ def smoothed(dist):
 
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture("/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/laneVideo/testReflex.avi")
+    cap = cv2.VideoCapture(r"Videos\percorsoCam.mp4")
 
     initalTrackbarVals = [106, 111, 24, 223]
     utils.initializeTrackbars(initalTrackbarVals)
@@ -86,7 +86,7 @@ if __name__ == '__main__':
             cap.set(cv2.CAP_PROP_POS_FRAMES,0)
             frameCounter=0
 
-        time.sleep(0.03)
+        #time.sleep(0.03)
         ret, img = cap.read()
         if ret == True:
             img = img[225:-12]
