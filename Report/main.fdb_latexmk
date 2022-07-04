@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1656952808 "c:/Users/devin/Desktop/Università/Ai_lab/proj/Cars-repo/Report/main.tex" "main.pdf" "main" 1656952812
-  "../pedestrianDetection/StopDetection.py" 1656869059 1709 62b923e905aa5ac7a84142810e6e6cea ""
+["pdflatex"] 1656952946 "c:/Users/devin/Desktop/Università/Ai_lab/proj/Cars-repo/Report/main.tex" "main.pdf" "main" 1656952952
+  "../pedestrianDetection/StopDetection.py" 1656952944 1848 ead7795b461541968807b47395fb1acf ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1440.tfm" 993062510 1460 05250f74aea2bdcfe9d6766811b8b7b2 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -143,6 +143,7 @@
   "C:/Program Files/MiKTeX/tex/latex/base/atveryend-ltx.sty" 1656074302 2462 2ab3964e30f8e7a2977395016edcbbc6 ""
   "C:/Program Files/MiKTeX/tex/latex/base/inputenc.sty" 1656074302 5048 84b05796b49b69e2d4257d537721c960 ""
   "C:/Program Files/MiKTeX/tex/latex/base/omlcmr.fd" 1656074302 2470 774c3c75bd2dc65a492ed1eac1231d62 ""
+  "C:/Program Files/MiKTeX/tex/latex/base/omscmr.fd" 1656074302 2469 5cf30656b812a1b3bb0f58f4a07885f2 ""
   "C:/Program Files/MiKTeX/tex/latex/base/size12.clo" 1656074302 8449 7fbdc9c8596083427317c1e525489c81 ""
   "C:/Program Files/MiKTeX/tex/latex/blindtext/blindtext.sty" 1623002099 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "C:/Program Files/MiKTeX/tex/latex/caption/caption.sty" 1647508320 54291 b8e5c600d4aa37b48a740dd2a6c26163 ""
@@ -223,8 +224,8 @@
   "images/robotside.jpg" 1656949948 6644514 9fd23904ce272c88786ab9f6d2baa7d3 ""
   "images/schema.jpg" 1656951274 299141 86786e40d8d0389d854b3f200623e294 ""
   "images/switch.jpg" 1656952401 21711 5dc07a566bacfa78f8d4bf61f87de8b7 ""
-  "main.aux" 1656952811 7591 b4f2c6ddbe97d267fd3d6da91c8c9ff4 "pdflatex"
-  "main.out" 1656952811 3740 6bc129bfbf41c76c85d1af57ca1fc8f0 "pdflatex"
+  "main.aux" 1656952951 7591 b4f2c6ddbe97d267fd3d6da91c8c9ff4 "pdflatex"
+  "main.out" 1656952951 3740 6bc129bfbf41c76c85d1af57ca1fc8f0 "pdflatex"
   "main.tex" 1656952803 23942 3bb692fe084548d55ec3eab3b1e80d64 ""
   (generated)
   "main.aux"
