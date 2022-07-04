@@ -1203,44 +1203,99 @@ INPUT .\images\logx.png
 INPUT .\images\logx.png
 INPUT .\images\logx.png
 INPUT .\images\logx.png
-INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT ..\pedestrianDetection\StopDetection.py
-INPUT ..\pedestrianDetection\StopDetection.py
-INPUT ..\pedestrianDetection\StopDetection.py
-INPUT ..\pedestrianDetection\StopDetection.py
-INPUT ..\pedestrianDetection\StopDetection.py
-INPUT ..\pedestrianDetection\StopDetection.py
-INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omlcmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omlcmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omlcmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omlcmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
+INPUT .\images\stopimg.jpg
+INPUT .\images\stopimg.jpg
+INPUT images\stopimg.jpg
+INPUT .\images\stopimg.jpg
+INPUT .\images\stopimg.jpg
+INPUT .\images\stopimg.jpg
+INPUT .\images\stopimg.jpg
+INPUT .\images\haar1.png
+INPUT .\images\haar1.png
+INPUT images\haar1.png
+INPUT .\images\haar1.png
+INPUT .\images\haar1.png
+INPUT .\images\haar1.png
+INPUT .\images\haar1.png
+INPUT .\images\haar2.png
+INPUT .\images\haar2.png
+INPUT images\haar2.png
+INPUT .\images\haar2.png
+INPUT .\images\haar2.png
+INPUT .\images\haar2.png
+INPUT .\images\haar2.png
+INPUT .\images\haar3.png
+INPUT .\images\haar3.png
+INPUT images\haar3.png
+INPUT .\images\haar3.png
+INPUT .\images\haar3.png
+INPUT .\images\haar3.png
+INPUT .\images\haar3.png
+INPUT .\images\haar4.png
+INPUT .\images\haar4.png
+INPUT images\haar4.png
+INPUT .\images\haar4.png
+INPUT .\images\haar4.png
+INPUT .\images\haar4.png
+INPUT .\images\haar4.png
+INPUT .\images\haar5.png
+INPUT .\images\haar5.png
+INPUT images\haar5.png
+INPUT .\images\haar5.png
+INPUT .\images\haar5.png
+INPUT .\images\haar5.png
+INPUT .\images\haar5.png
+INPUT .\images\haar6.png
+INPUT .\images\haar6.png
+INPUT images\haar6.png
+INPUT .\images\haar6.png
+INPUT .\images\haar6.png
+INPUT .\images\haar6.png
+INPUT .\images\haar6.png
+INPUT .\images\haar7.png
+INPUT .\images\haar7.png
+INPUT images\haar7.png
+INPUT .\images\haar7.png
+INPUT .\images\haar7.png
+INPUT .\images\haar7.png
+INPUT .\images\haar7.png
+INPUT .\images\haar8.png
+INPUT .\images\haar8.png
+INPUT images\haar8.png
+INPUT .\images\haar8.png
+INPUT .\images\haar8.png
+INPUT .\images\haar8.png
+INPUT .\images\haar8.png
+INPUT .\images\haar9.png
+INPUT .\images\haar9.png
+INPUT images\haar9.png
+INPUT .\images\haar9.png
+INPUT .\images\haar9.png
+INPUT .\images\haar9.png
+INPUT .\images\haar9.png
+INPUT .\images\haar10.png
+INPUT .\images\haar10.png
+INPUT images\haar10.png
+INPUT .\images\haar10.png
+INPUT .\images\haar10.png
+INPUT .\images\haar10.png
+INPUT .\images\haar10.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\images\3D_distance.png
+INPUT .\images\3D_distance.png
+INPUT images\3D_distance.png
+INPUT .\images\3D_distance.png
+INPUT .\images\3D_distance.png
+INPUT .\images\3D_distance.png
+INPUT .\images\3D_distance.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
-INPUT C:\Users\devin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\devin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\devin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1440.pk
 INPUT C:\Users\devin\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1440.pk
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
@@ -1259,8 +1314,6 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
