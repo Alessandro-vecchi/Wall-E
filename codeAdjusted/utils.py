@@ -10,6 +10,7 @@ def thresholding(img):
     maskWhite = cv2.inRange(imgHsv,lowerWhite,upperWhite)
     return maskWhite
 
+
 '''
 def thresholding1(img):
     # otsu thresholding
@@ -24,6 +25,8 @@ def thresholding1(img):
     maskWhite = cv2.inRange(imgHls,lowerWhite,upperWhite)
     return otsu - maskWhite
     '''
+
+
 def warpImg(img,points,w,h,inv = False):
     pts1 = np.float32(points)
     pts2 =  np.float32([[0,0],[w,0],[0,h],[w,h]])
@@ -33,6 +36,7 @@ def warpImg(img,points,w,h,inv = False):
         matrix = cv2.getPerspectiveTransform(pts1,pts2)
     imgWarp = cv2.warpPerspective(img,matrix,(w,h))
     return imgWarp
+
 
 def nothing(a):
     pass
@@ -135,7 +139,7 @@ def stopDetector(img,cascadePath, minArea):
     return 0
 
 
-def distance_to_camera(perWidth):
+def distance_to_camera(reflectedWidth):
     # https://pyimagesearch.com/2015/01/19/find-distance-camera-objectmarker-using-python-opencv/
     # compute and return the distance from the marker to the camera
     knownWidth = 4.5 # width stop sign
@@ -147,5 +151,5 @@ def distance_to_camera(perWidth):
 	cv2.putText(image, "%.2fft" % (inches / 12),
 		(image.shape[1] - 200, image.shape[0] - 20), cv2.FONT_HERSHEY_SIMPLEX,
 		2.0, (0, 255, 0), 3)'''
-    return (knownWidth * focalLength) / perWidth
+    return (knownWidth * focalLength) / reflectedWidth
 
