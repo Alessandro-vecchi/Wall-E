@@ -323,7 +323,8 @@ As you can see from the graph, its behaviour is too line-shaped to satisfy our g
 In practice, we also changed the scaling of the $x$ variable because we saw it worked better inside the range between the green and purple function.
 
 \subsection{Hardware implementation}
-Now we need to implement the function that acts on the robot.  
+Now we need to implement the function that acts on the robot.
+Simply enough, we're just going to take the smoothed value we just obtained by applying that function and insert it as the parameter by which the car has to curve in the turn module of MotorModule. The velocity will be kept at 0.2 for experimental purposes.
 
 \subsection{How to recognize that the lane has ended}
 To recognize the end of the track it's enough to just identify a stripe on the mid-bottom part of the warped image that has a huge amount of black pixels. This is because the warped image consider only the street immediately in front of the vehicle and thus if there is a road it will detect it with the corrispective amount of white pixels. To make the detection of the end of the lane more resistant to threshold's noise we will not check for the blackness of the full stripe but we will just make sure that there is at least the 95\% of black pixels on that region. \\
@@ -469,11 +470,6 @@ After building the vehicle and preparing the path, having written the code for t
 
 \section{Self-Evaluation $\&$ Future Projects}
 We can say with utmost certainty that the takeaway from a project like this is definitely going to help in the future. Having designed an autonomous vehicle we feel equipped with the tools to learn more about Computer Vision and we are heading to further improve this project next year during the deep learning course, by implementing the lane detection with Neural Networks and by adding more knowledge tothe world, like our beloved semaphore recognition and pedestrian detection. We could also add vocal command during the NLP course, by simply telling it order with our voice. We can basically add any sort of things to make the project cooler and we can't wait to improve it further. Indeed, a project like this will be a great learning experience just like our final project was. \\
-
-\subsection{Finding the curve}
-We are at the core of our lane detection program. We have a black and white road seen from above and our car manage to drive in the center of the road. What we have to determine now is how do we find curves.\\
-As I said before, we're going to determine it by summing the pixels on the y-axis. But how exactly are we going to do that? Well, we already found the center of the street, so we can imagine to draw a line passing through it. The side of the line that will have more white pixels determines the direction of the curve. But what about the intensity?\\
-To get a grasp of what I mean imagine a frame of the road with a curve towards the left. If the curve is very round, then we will have a lot of white pixels in the left part of the curve. If it's not steep but just a small curve, then it will not have more many values on the left. Therefore, the idea is that the average x coordinate gives us the intensity of the curve. The computations are the same as the ones for the center of the street. How much curvy is a curve can be determined by summing the pixels in the columns of the whole image and taking only the non-noisy columns, as we did before. Then we can obtain, by subtracting this value to the one that represent the center of the road, the roundedness of the curve, that is represented by 
 
 
 \section{References}
