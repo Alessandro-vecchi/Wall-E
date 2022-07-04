@@ -16,6 +16,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{subcaption}
  
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -70,7 +71,7 @@ Throughout the AI Lab course we have learnt many Computer Vision and Deep Learni
 %starting off with the answer
 \subsection{Problem Statement}
 \begin{large}
-It's been quite a journey. We decided to tackle the problem of building from start to finish a self-driving car with Raspberry Pi 4 with a lane following algorithm that doesn't rely on deep learning, but only on Computer Vision. It's been an awesome project, even if we spent a lot of time doing it we enjoyed every part of it. The feeling of succedingly building a self-driving car is unbearable, not mentioning that it can stop and restart at the STOP signal flawlessly. \\
+It's been quite a journey. We decided to tackle the problem of building from start to finish a self-driving car with Raspberry Pi 4 with a lane following algorithm that doesn't rely on deep learning, but only on a pipeline of various Image Processing techniques. It's been an awesome project, even if we spent a lot of time doing it we enjoyed every part of it. The feeling of succedingly building a self-driving car is unbearable, not mentioning that it can stop and restart at the STOP signal flawlessly. \\
 Originally, we wanted to implement also a lane following algorithm with neural networks and to perform semaphore recognition with a 3D printed semaphore, but we underestimated the amount of time required for this huge project and the rest of the time was spent in internships and for studying the other 4 exams of the semester. But still we manage to complete a lot of tasks and we couldn't be any happier! \\
 Next year we could improve the project during the Deep Learning course by creating a neural network solution to the problem and add vocal commands and speech processing tasks during the NLP course. There is still a lot to be done and we can't wait to go further in learning but, for now, let's settle and fully understand the topics of this course!
 \subsection{Engineering Design Tasks}
@@ -82,56 +83,84 @@ As engineers, we take on the task of designing a new device with a unique approa
 \item[3] After coming up with these solutions, we chose the best possible solution that solved the problem in the most efficient way for our prototype.
 \item[4] Testing the solution is the last step in the engineering design algorithm and hence, we performed various tests on the vehicle, tweaked it to make it more functional and tested it on many test cases as necessary. 
 \end{itemize}
+\newpage
+
+\section{Building the Robot}
 
 
-\section{Component $\&$ Analysis}
+\subsection{Components}
 
+The main idea was to build a small car that was able to see. To achieve all the tasks needed for such a robot, we made the following shopping list: 
+\begin{itemize}
+  \item 3 big batteries for powering the motors (3.7V each one).
+  \item 1 Powerbank to power the Raspberry.
+  \item 4 DC motors and wheels.
+  \item A two-level chassis made of plastic plates to accomodate all the devices.
+  \item 1 Raspberry-Pi-4 as computational unit, basically, the computer.
+  \item 1 L298 h-bridge driver, wired to the batteries and the computer, that takes signals from the Raspberry Output pins and give the right amount of energy to the motors.
+  \item 1 Camera of 8MP compatible with the Pi and a Wide-Angle lens to retain a more spreaded view.
+  \item A 3D-printed arm to hold the camera lifted up.
+  \item A bunch of wirings, double sided tape, screws and bolts.
+\end{itemize}
+Let's see how those components look: 
 
-\subsection{Motors}
-
-In electronics, a motor is an electrical machine that converts electrical energy into mechanical energy. For our project, the motors had to be controlled so that their duty cycles could be changed and their direction monitored based on the input from the RedBot sensors. When one of the RedBot sensors detected a white strip the motor on the other side would slow down relative to the motor on the same side so that the vehicle could autonomously change direction based on the data input from the RedBot sensors. 
-
-\begin{figure} [hbp]
-\centering
-  \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth, height = 5cm]{images/perspective_transform.jpg}
-    \caption{Left motor Characterization}
-    \label{fig:f1}
-  \end{subfigure}
-  \hspace{1cm}
-  \begin{subfigure}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth, height = 5cm]{images/perspective_transform.jpg}
-    \caption{Right motor Characterization}
-    \label{fig:f2}
-  \end{subfigure}
-  \caption{Motor Characteristics}
+\begin{figure}[hb]
+  \centering
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/Chassis.jpg}
+    \caption{Wheels, motors and chassis}
+    \label{fig:left}
+    \end{subfigure}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/rasp.jpg}
+    \caption{Raspberry Pi 4}
+    \label{fig:right}
+    \end{subfigure}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/bridge.jpg}
+    \caption{L298n Motor Driver}
+    \label{fig:right}
+    \end{subfigure}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/batterie.jpg}
+    \caption{Motor's batteries}
+    \label{fig:right}
+    \end{subfigure}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/powerbank.jpg}
+    \caption{Powerbank}
+    \label{fig:right}
+    \end{subfigure}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{images/batterie.jpg}
+    \caption{Motor's batteries}
+    \label{fig:right}
+    \end{subfigure}
+  \label{fig:combined}
 \end{figure}
 
-\subsubsection{Left motor Characteristic}
-
-$~~~~I=0.014645V+0.084667 ~~~~(moving)~~~$   Moving Point - (1.2,0.081)\\
-$~~~~~I=0.020501V+0.042693 ~~~~(stalling)~~~$  Stalling Point - (0.4,0.075)
-\subsubsection{Right motor Characteristic}
-
-$~~~~I=0.005886V+0.089083 ~~~~(moving)~~~$   Moving Point - (1.2,0.081)\\
-$~~~~~I=0.018806V+0.032521 ~~~~(stalling)~~~$  Stalling Point - (0.4,0.057)\\
-
-
-\subsection{Arduino Microcontroller (SparkFun)}
-An Arduino Microcontroller is a multipurpose tool that can be used for many electronics projects as it provides many functions to a particular circuit. For our project we use it to control the vehicle's microphone sensor and the 2 RedBot sensors using C-Language code. After familiarizing with C, we wrote the code to control the sensors ourselves. (\textit{code posted below})
-\begin{figure}[hbp]
+\subsection{Assembling all the parts}
+Now it's time to give a sense to this pile of stuff, and mount all the components together. On the bottom level of the robot will be located the two power sources, batteries and powerbank, along with the l298n driver. On the top level will sit the Raspberry and the camera mounted on the 3D-printed support. Here's a picture of the complete robot:
+\begin{figure}[hb]
 \centering
-\includegraphics[width=0.4\textwidth]{images/perspective_transform.jpg}
-\caption{\label{fig:i}Arduino Microcontroller (SparkFun)\\Source: \protect\url{http://bit.ly/1Xo6sRz}}
-\end{figure}
-
-\subsection{Silicon NPN Transistor (2N5192G)}
-A transistor is formally defined as a semiconductor device which can be used to amplify electrical signals or to switch electrical signals. In our experiment we used the same transistor from Lab 9 as our voltage amplifier.\\
-
-\begin{figure}[hbp]
-\centering
-\includegraphics[width=0.4\textwidth, height = 3cm]{images/perspective_transform.jpg}
-\caption{\label{fig:4}Silicon NPN Transistor (2N5192G)\\Source: \protect\url{http://bit.ly/1Spy8ii}}
+\begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width = \textwidth]{images/car1.jpg}
+  \caption{Powerbank}
+  \label{fig:right}
+  \end{subfigure}
+\begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width = \textwidth]{images/car2.jpg}
+  \caption{Powerbank}
+  \label{fig:right}
+  \end{subfigure}
 \end{figure}
 
 \subsection{Resistors}
