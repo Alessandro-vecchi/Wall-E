@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1656926614 "c:/Users/devin/Desktop/Università/Ai_lab/proj/Cars-repo/Report/main.tex" "main.pdf" "main" 1656926618
+["pdflatex"] 1656926746 "c:/Users/devin/Desktop/Università/Ai_lab/proj/Cars-repo/Report/main.tex" "main.pdf" "main" 1656926751
   "../pedestrianDetection/StopDetection.py" 1656869059 1709 62b923e905aa5ac7a84142810e6e6cea ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1440.tfm" 993062510 1460 05250f74aea2bdcfe9d6766811b8b7b2 ""
@@ -209,7 +209,7 @@
   "C:/Users/devin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1656868478 11548 440433d61cd77a4b01aedfef4c5c1977 ""
   "C:/Users/devin/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1440.pk" 1656872700 16968 2f2b47bed077a150e44472f704654971 ""
   "C:/Users/devin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1656867490 10316885 bf6526c5608e614f1cf8746ea2a902ed ""
-  "c:/Users/devin/Desktop/Università/Ai_lab/proj/Cars-repo/Report/main.tex" 1656926608 24748 baa1e17115c105366d728b484bbe1bd9 ""
+  "c:/Users/devin/Desktop/Università/Ai_lab/proj/Cars-repo/Report/main.tex" 1656926740 24702 70a3e24874468f7d977dc0817e34fafd ""
   "images/Chassis.jpg" 1656873033 33941 c14aa14d7108957127a4c9aa672baf49 ""
   "images/batterie.jpg" 1656924628 38314 006829dc1427f5a6bd6685c882263ebb ""
   "images/birds_eye_view.png" 1656868755 34095 d69fb37d70f8f523d2d9d205fa159499 ""
@@ -224,9 +224,9 @@
   "images/powerbank.jpg" 1656924919 48163 9dcc371dca0712c1d0d99e5313ce2487 ""
   "images/rasp.jpg" 1656923820 38312 5c982aceefd5c761bbda35e25137cf4a ""
   "images/road_endless_straight_vanishing.jpg" 1656868755 35146 2e6dafc7e328cb9d75afa25494219aba ""
-  "main.aux" 1656926618 7464 b12b7b59e910b32a1bd57f3a412cb812 "pdflatex"
-  "main.out" 1656926618 3978 5f82b1aa36c3b5abf9e89107f234e583 "pdflatex"
-  "main.tex" 1656926608 24748 baa1e17115c105366d728b484bbe1bd9 ""
+  "main.aux" 1656926750 7580 e727f4f79d02eed6d6b66494f28a668b "pdflatex"
+  "main.out" 1656926750 3978 5f82b1aa36c3b5abf9e89107f234e583 "pdflatex"
+  "main.tex" 1656926740 24702 70a3e24874468f7d977dc0817e34fafd ""
   (generated)
   "main.aux"
   "main.log"
