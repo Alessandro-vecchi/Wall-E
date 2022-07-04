@@ -326,6 +326,62 @@ In practice, we also changed the scaling of the $x$ variable because we saw it w
 Now we need to implement the function that acts on the robot.
 Simply enough, we're just going to take the smoothed value we just obtained by applying that function and insert it as the parameter by which the car has to curve in the turn module of MotorModule. The velocity will be kept at 0.2 for experimental purposes.
 
+At the end, the whole pipeline looks like this:
+
+\begin{figure} [!hbp]
+  \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/}
+      \caption{Road seen from the camera}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/}
+      \caption{Thresholded Image \\}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/}
+      \caption{Points for tuning the warping \\}
+      
+    \end{subfigure}
+  \end{figure}
+
+\begin{figure} [!hbp]
+  \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/}
+      \caption{Bird eye thresholded view}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/}
+      \caption{Center of the road \\}
+      
+    \end{subfigure}
+    \hspace{0.1cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+    \centering
+    \captionsetup{justification=centering}
+      \includegraphics[width=\textwidth]{images/}
+      \caption{Curve's coefficient and inverse warped path \\}
+      
+    \end{subfigure}
+  \end{figure}
+  
 \subsection{How to recognize that the lane has ended}
 To recognize the end of the track it's enough to just identify a stripe on the mid-bottom part of the warped image that has a huge amount of black pixels. This is because the warped image consider only the street immediately in front of the vehicle and thus if there is a road it will detect it with the corrispective amount of white pixels. To make the detection of the end of the lane more resistant to threshold's noise we will not check for the blackness of the full stripe but we will just make sure that there is at least the 95\% of black pixels on that region. \\
 Moreover, even if small, there is a chance that the car can stop if we just detect blackness on just one frame. Thus, reasonably enough, we will take a mini-batch of frames and if most of them assess that the frames detected are black the car will simply stop or turn around.  
