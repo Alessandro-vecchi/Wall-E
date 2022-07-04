@@ -13,13 +13,13 @@ def main():
     
     trip()    # andata
     turnAround()# turnAround    
-    trip(2)  # ritorno
+    trip()  # ritorno
     motor.stop(1)
     print('The end')
 
 
-def trip(num=1):
-    result = cv2.VideoWriter(f'vid{num}.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
+def trip():
+    #result = cv2.VideoWriter(f'vid{num}.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
     blackFrames = 0
     cap = cv2.VideoCapture(0)
     #initalTrackbarVals = [56, 131, 0, 240]
@@ -57,7 +57,7 @@ def trip(num=1):
                 break
         else:
             break
-    result.release()
+    #result.release()
 
 
 def turnAround():
@@ -83,7 +83,7 @@ def turnAround():
                 print('yes')
                 motor.stop()
                 break
-    res.release()
+    #res.release()
 
 if __name__ == '__main__':
     main()
