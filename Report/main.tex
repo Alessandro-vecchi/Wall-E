@@ -339,7 +339,7 @@ After searching for a week for LEGO's STOP signals, we manage to print them in 3
 \begin{figure} [!h]
   \centering
   \captionsetup{justification=centering}
-  \includegraphics[width=8cm]{images/logx.png}
+  \rotatebox[origin=c]{270}{\includegraphics[width = 10cm]{images/stopimg.jpg}}
   \caption{3D printed STOP signals}
   \end{figure}
 To detect them we tried firstly to use SIFT and ORB as matching tecniques, as we did in class, but unfortunately the sign posts had a too low number of relevant descriptors to be of any use.
@@ -443,7 +443,7 @@ It can be processed by simply scanning setting in its pixels the sum of the corr
   \end{figure}
 
 \subsection{Our implementation}
-We made a script that extracts images from videos. We made a couple of videos on our 3D printed STOP signals which result in 1200 positive images to give as training set and more or less 2000 negative images as negative samples for the training set. The scripts are on the STOP recognition folder. After setting a couple of hyperparameters, we used \href{https://amin-ahmadi.com/cascade-trainer-gui/}{this GUI} to train the classifier and to speed-up the process, which returned the XML file.
+We made a script that extracts images from videos. We made a couple of videos on our 3D printed STOP signals which result in 1700 positive images to give as training set and more or less 2000 negative images as negative samples for the training set. The scripts are on the STOP recognition folder. After setting a couple of hyperparameters, we used \href{https://amin-ahmadi.com/cascade-trainer-gui/}{this GUI} to train the classifier and to speed-up the process, which returned the XML file.
 We can now give as input to the Haar cascade classifier implementation of OpenCV our XML file, in order to set the best parameter for detecting the STOPs. Once again, we used trackbars to help us in the selection. We tuned the scale parameter, for selecting the filters with the best scale value; the neig parameter, for removing false positive and only detecting true positives, by considering only window that are in the neighbourhood of other windows; the minArea parameter, since we didn't want very small false positive to be detected; finally, the brightness, in order to be a little more resistant to lightning conditions. Its accuracy is impressive.
 
 
@@ -470,22 +470,6 @@ After building the vehicle and preparing the path, having written the code for t
 
 \section{Self-Evaluation $\&$ Future Projects}
 We can say with utmost certainty that the takeaway from a project like this is definitely going to help in the future. Having designed an autonomous vehicle we feel equipped with the tools to learn more about Computer Vision and we are heading to further improve this project next year during the deep learning course, by implementing the lane detection with Neural Networks and by adding more knowledge tothe world, like our beloved semaphore recognition and pedestrian detection. We could also add vocal command during the NLP course, by simply telling it order with our voice. We can basically add any sort of things to make the project cooler and we can't wait to improve it further. Indeed, a project like this will be a great learning experience just like our final project was. \\
-
-
-\section{References}
-\begin{itemize}
-\item[1] Thresholding - OpenCV - Documentation\\ \url{https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html}
-\item[2] Warp perspective - OpenCV - Documentation\\
-\urlhttps://docs.opencv.org/4.x/da/d54/group__imgproc__transform.html}
-\item[3] Color spaces - OpenCV - Documentation\\
-\url{https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html}
-\item[4]  Focal length | Youtube and links on Code \\
-\url{https://www.youtube.com/watch?v=4CoEsqePADw}
-\item[5] Haar features - Wikipedia, the free encyclopedia\\
-\url{https://en.wikipedia.org/wiki/Haar-like_feature}
-\item[6] Haar Cascade - Columbia University\\
-\url{https://fpcv.cs.columbia.edu}
-\end{itemize}
 
 \noindent\rule{18.5cm}{0.4pt}
 \end{large} 
