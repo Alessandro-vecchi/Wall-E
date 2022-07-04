@@ -57,9 +57,9 @@ class Motor():
         sleep(t)
         
     def parkour(self,speed=0,t=0):
-        turn = 40
+        turn = 37
         leftSpeed = speed - turn
-        rightSpeed = speed + 60
+        rightSpeed = speed + 57
 
         self.pwmA.ChangeDutyCycle(abs(leftSpeed))
         self.pwmB.ChangeDutyCycle(abs(rightSpeed))

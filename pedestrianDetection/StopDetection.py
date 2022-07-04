@@ -48,6 +48,9 @@ while True:
         if area > minArea:
             cv2.rectangle(img, (x,y), (x+w, y+h), color, 3)
             cv2.putText(img, objectName, (x,y-5), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, color, 2)
+            f = 42 * w/4
+            
+            cv2.putText(img, f'Depth: {f}', (x,y-5), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, color, 2)
             roi_color = img[y:y+h, x:x+w]
         
     cv2.imshow("Result", img)

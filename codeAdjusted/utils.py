@@ -112,8 +112,8 @@ def imageArray(scale, imgArray):
 def stopDetector(img,cascadePath, minArea):
     cascade = cv2.CascadeClassifier(cascadePath)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    scaleVal = 1 + 161/1000
-    neig = 11
+    scaleVal = 1 + 250/1000
+    neig = 12
     objects = cascade.detectMultiScale(gray, scaleVal, neig)
     for (x,y,w,h) in objects:
         area = w*h
@@ -125,8 +125,8 @@ def stopDetector(img,cascadePath, minArea):
 def distance_to_camera(perWidth):
     # https://pyimagesearch.com/2015/01/19/find-distance-camera-objectmarker-using-python-opencv/
 	# compute and return the distance from the marker to the camera
-    knownWidth = 5 # width stop sign
-    focalLength = 2 # to be obtained
+    knownWidth = 4.5 # width stop sign
+    focalLength = 330 # mm to be obtained
     '''
     box = cv2.cv.BoxPoints(marker) if imutils.is_cv2() else cv2.boxPoints(marker)
 	box = np.int0(box)
