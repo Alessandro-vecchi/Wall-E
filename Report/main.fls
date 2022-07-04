@@ -1149,14 +1149,20 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
-INPUT images\perspective_transform.jpg
-INPUT .\images\perspective_transform.jpg
+INPUT .\images\normal2.jpg
+INPUT .\images\normal2.jpg
+INPUT images\normal2.jpg
+INPUT .\images\normal2.jpg
+INPUT .\images\normal2.jpg
+INPUT .\images\normal2.jpg
+INPUT .\images\normal2.jpg
+INPUT .\images\thres2.jpg
+INPUT .\images\thres2.jpg
+INPUT images\thres2.jpg
+INPUT .\images\thres2.jpg
+INPUT .\images\thres2.jpg
+INPUT .\images\thres2.jpg
+INPUT .\images\thres2.jpg
 INPUT .\images\road_endless_straight_vanishing.jpg
 INPUT .\images\road_endless_straight_vanishing.jpg
 INPUT images\road_endless_straight_vanishing.jpg
@@ -1189,6 +1195,13 @@ INPUT .\images\birds_eye_view.png
 INPUT .\images\birds_eye_view.png
 INPUT .\images\birds_eye_view.png
 INPUT .\images\birds_eye_view.png
+INPUT .\images\base.jpg
+INPUT .\images\base.jpg
+INPUT images\base.jpg
+INPUT .\images\base.jpg
+INPUT .\images\base.jpg
+INPUT .\images\base.jpg
+INPUT .\images\base.jpg
 INPUT .\images\madFunction.png
 INPUT .\images\madFunction.png
 INPUT images\madFunction.png
@@ -1203,6 +1216,45 @@ INPUT .\images\logx.png
 INPUT .\images\logx.png
 INPUT .\images\logx.png
 INPUT .\images\logx.png
+INPUT .\images\normal.jpg
+INPUT .\images\normal.jpg
+INPUT images\normal.jpg
+INPUT .\images\normal.jpg
+INPUT .\images\normal.jpg
+INPUT .\images\normal.jpg
+INPUT .\images\normal.jpg
+INPUT .\images\thres.jpg
+INPUT .\images\thres.jpg
+INPUT images\thres.jpg
+INPUT .\images\thres.jpg
+INPUT .\images\thres.jpg
+INPUT .\images\thres.jpg
+INPUT .\images\thres.jpg
+INPUT .\images\warp.jpg
+INPUT .\images\warp.jpg
+INPUT images\warp.jpg
+INPUT .\images\warp.jpg
+INPUT .\images\warp.jpg
+INPUT .\images\warp.jpg
+INPUT .\images\warp.jpg
+INPUT .\images\warptr.jpg
+INPUT .\images\warptr.jpg
+INPUT images\warptr.jpg
+INPUT .\images\warptr.jpg
+INPUT .\images\warptr.jpg
+INPUT .\images\warptr.jpg
+INPUT .\images\warptr.jpg
+INPUT .\images\base.jpg
+INPUT .\images\base.jpg
+INPUT images\base.jpg
+INPUT .\images\base.jpg
+INPUT .\images\final.jpg
+INPUT .\images\final.jpg
+INPUT images\final.jpg
+INPUT .\images\final.jpg
+INPUT .\images\final.jpg
+INPUT .\images\final.jpg
+INPUT .\images\final.jpg
 INPUT .\images\stopimg.jpg
 INPUT .\images\stopimg.jpg
 INPUT images\stopimg.jpg
@@ -1293,6 +1345,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

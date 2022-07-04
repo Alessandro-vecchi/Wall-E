@@ -221,7 +221,7 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=4cm, height = 6cm]{images/perspective_transform.jpg}
+      \includegraphics[width=7cm, height = 4.5cm]{images/normal2.jpg}
       \caption{How we see the path}
       
     \end{subfigure}
@@ -229,7 +229,7 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth, height = 6cm]{images/perspective_transform.jpg}
+      \includegraphics[width= 7cm, height = 4.5cm]{images/thres2.jpg}
       \caption{Thresholded path \\}
       
     \end{subfigure}
@@ -239,16 +239,16 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
 Recall that one of our goals is to determine the radius of curvature of the road lane, in order to be able to perform the curve. \\
 The problem is that the camera perspective is not an accurate representation of what is going on in the real world. From its point of view, the lane lines form a trapezoid-like shape. We can't compute the radius of curvature of the road because the lane width seems converging to a point, as you can see from this example:\\
 
-\begin{figure} [!htb]
+\begin{figure} [h!]
 \centering
 \captionsetup{justification=centering}
-\includegraphics[width=8cm]{images/road_endless_straight_vanishing.jpg}
+\includegraphics[width=6cm]{images/road_endless_straight_vanishing.jpg}
 \caption{Camera's perspective}
 \end{figure}
 
 To fix this, we can apply a perspective transformation that warp the camera's perspective into a birds-eye view perspective.
 
-\begin{figure} [!hb]
+\begin{figure} [h!]
   \centering
   \captionsetup{justification=centering}
   \includegraphics{images/perspective_transform.jpg}
@@ -271,7 +271,7 @@ To do this we need to identify the region of interest, defined by the four corne
     \centering
     \captionsetup{justification=centering}
       \includegraphics[width=\textwidth]{images/points_warp.png}
-      \caption{Points for tuning the warping \\}
+      \caption{Points for tuning \\}
       
     \end{subfigure}
     \hspace{0.1cm}
@@ -291,7 +291,7 @@ Well, it turns out that is rather easy. Ideally, we have a black image and a whi
 \begin{figure} [!htb]
   \centering
   \captionsetup{justification=centering}
-  % \includegraphics{lane_center.jpg}
+  \includegraphics[width=8cm]{images/base.jpg}
   \caption{How the center is determined}
   \end{figure}
 
@@ -303,7 +303,7 @@ Thus, we have to find a function that given the distance in pixel between center
 The function we found seems totally out of the blue, so we are going to explain step by step the reasoning we did to find it.
 Our goal was to find a function whose radius of curvature was decently high even if the distance from the center was small, but not too high when the distance was large. Moreover, since the distance from the center could also be negative, it had to be symmetric wrt the y axis. Something like this:
 
-\begin{figure} [!h]
+\begin{figure} [h!]
   \centering
   \captionsetup{justification=centering}
   \includegraphics[width=8cm]{images/madFunction.png}
@@ -333,7 +333,7 @@ At the end, the whole pipeline looks like this:
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/}
+      \includegraphics[width=\textwidth]{images/normal.jpg}
       \caption{Road seen from the camera}
       
     \end{subfigure}
@@ -341,7 +341,7 @@ At the end, the whole pipeline looks like this:
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/}
+      \includegraphics[width=\textwidth]{images/thres.jpg}
       \caption{Thresholded Image \\}
       
     \end{subfigure}
@@ -349,8 +349,8 @@ At the end, the whole pipeline looks like this:
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/}
-      \caption{Points for tuning the warping \\}
+      \includegraphics[width=\textwidth]{images/warp.jpg}
+      \caption{Points for warping\\}
       
     \end{subfigure}
   \end{figure}
@@ -360,7 +360,7 @@ At the end, the whole pipeline looks like this:
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/}
+      \includegraphics[width=\textwidth]{images/warptr.jpg}
       \caption{Bird eye thresholded view}
       
     \end{subfigure}
@@ -368,7 +368,7 @@ At the end, the whole pipeline looks like this:
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/}
+      \includegraphics[width=\textwidth]{images/base.jpg}
       \caption{Center of the road \\}
       
     \end{subfigure}
@@ -376,8 +376,8 @@ At the end, the whole pipeline looks like this:
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/}
-      \caption{Curve's coefficient and inverse warped path \\}
+      \includegraphics[width=\textwidth]{images/final.jpg}
+      \caption{Curve's coefficient  \\}
       
     \end{subfigure}
   \end{figure}
@@ -392,10 +392,10 @@ Once the end of the first round is detected, the car start turning back. The way
 
 \section{Stop recognition using Haar Cascade Classifier}
 After searching for a week for LEGO's STOP signals, we manage to print them in 3D and the result is even better.\par
-\begin{figure} [!h]
+\begin{figure} [h!]
   \centering
   \captionsetup{justification=centering}
-  \rotatebox[origin=c]{270}{\includegraphics[width = 10cm]{images/stopimg.jpg}}
+  \rotatebox[origin=c]{270}{\includegraphics[width = 7cm]{images/stopimg.jpg}}
   \caption{3D printed STOP signals}
   \end{figure}
 To detect them we tried firstly to use SIFT and ORB as matching tecniques, as we did in class, but unfortunately the sign posts had a too low number of relevant descriptors to be of any use.
@@ -433,12 +433,12 @@ What does an Haar feature do?
   \end{figure}
 Its role consists on detecting differences on intensities on each area where an Haar filter is applied on the image. They are of course sensitive to scale, since if we are scanning an image using a 2 by 2 filter we can't expect to find a face inside. Therefore we're not only going to apply a type of filter while scanning the whole image, but we are also going to apply different scales of the same filter, for a better classification. 
 Let's now look at its computational complexity and at how it can be improved.
-\begin{figure} [!hbp]
+\begin{figure} [h!]
   \centering
     \begin{subfigure}[b]{0.3\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/haar4.png}
+      \includegraphics[width=5cm]{images/haar4.png}
       \caption{How to compute an Haar feature}
       
     \end{subfigure}
@@ -446,13 +446,16 @@ Let's now look at its computational complexity and at how it can be improved.
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=\textwidth]{images/haar5.png}
+      \includegraphics[width=6.5cm]{images/haar5.png}
       \caption{Computational complexity of a single Haar feature}
       
     \end{subfigure}
-  \end{figure}
+\end{figure}
+
+
 As we can see from the image on the left above, an Haar feature is computed by performing the correlation between the Haar filters and the corresponding portion of the image, but since the haar filters are either -1 or 1, we can remove multiplication and only use additions and subtractions, which are a lot cheaper. However, if we have an $M\times N$ filter, we still need to compute $M\times N/2-1$ additions for the two sums and one more for subtracting them, which results in a total of $(N\times M)-1$ of additions per pixel per scaled filter.
 This cost can be substantially improved if we use integral images.
+
 \begin{figure} [!h]
   \centering
     \begin{subfigure}[b]{0.4\textwidth}
@@ -472,7 +475,9 @@ This cost can be substantially improved if we use integral images.
       \end{subfigure}
   \end{figure}
 These images are tables that pre-store in the bottom right vertex the sum of all the pixels inside each rectangle/square with top left vertex which coincides with the top left one of the image. It can compute the sum of any rectagle using only 3 additions, so for an Haar filter it only need 7 additions.
-\begin{figure} [!hbp]
+
+
+\begin{figure} [h!]
   \centering
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
@@ -490,6 +495,8 @@ These images are tables that pre-store in the bottom right vertex the sum of all
       
     \end{subfigure}
   \end{figure}
+
+
 It can be processed by simply scanning setting in its pixels the sum of the corresponding cell in the image with the two rectangle above it, represented by the integrals sums B and C in the image below, minus the rectangle D that has been added two times.
 \begin{figure} [!h]
   \centering
@@ -527,9 +534,6 @@ After building the vehicle and preparing the path, having written the code for t
 \section{Self-Evaluation $\&$ Future Projects}
 We can say with utmost certainty that the takeaway from a project like this is definitely going to help in the future. Having designed an autonomous vehicle we feel equipped with the tools to learn more about Computer Vision and we are heading to further improve this project next year during the deep learning course, by implementing the lane detection with Neural Networks and by adding more knowledge tothe world, like our beloved semaphore recognition and pedestrian detection. We could also add vocal command during the NLP course, by simply telling it order with our voice. We can basically add any sort of things to make the project cooler and we can't wait to improve it further. Indeed, a project like this will be a great learning experience just like our final project was. \\
 
-<<<<<<< HEAD
-=======
-
 \section{References}
 \begin{itemize}
 \item[1] Thresholding - OpenCV - Documentation\\ \url{https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html}
@@ -547,7 +551,6 @@ We can say with utmost certainty that the takeaway from a project like this is d
 \url{https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf}
 \end{itemize}
 
->>>>>>> 40dad92a8c1fe31550656ac8740baa296dc27c64
 \noindent\rule{18.5cm}{0.4pt}
 \end{large} 
 \end{document}
