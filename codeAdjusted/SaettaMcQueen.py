@@ -3,7 +3,6 @@ import utils
 from MotorModule import Motor
 import RoadModule as Rm
 import cv2, numpy as np
-from time import sleep
 
 ##################################################
 motor = Motor(2,3,4,16,20,21)
@@ -13,13 +12,13 @@ def main():
     
     trip()    # andata
     turnAround()# turnAround    
-    trip(2)  # ritorno
+    trip()  # ritorno
     motor.stop(1)
     print('The end')
 
 
-def trip(num=1):
-    result = cv2.VideoWriter(f'vid{num}.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
+def trip():
+    #result = cv2.VideoWriter(f'vid{num}.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
     blackFrames = 0
     cap = cv2.VideoCapture(0)
     #initalTrackbarVals = [56, 131, 0, 240]
@@ -57,12 +56,11 @@ def trip(num=1):
                 break
         else:
             break
-    result.release()
+    #result.release()
 
 
 def turnAround():
-    res = cv2.VideoWriter('turnarounddd.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
-    #print('ahahahhha')
+    #res = cv2.VideoWriter('turnarounddd.avi', cv2.VideoWriter_fourcc(*'MJPG'),30, (480,240))
     motor.move(0.2, 0, 0.42)
     motor.stop()
     sleep(1)
@@ -80,10 +78,9 @@ def turnAround():
             eagleView = utils.warpImg(imgThres,points,wT,hT)
 
             if not Rm.RoadEnded(eagleView,0.3):
-                print('yes')
                 motor.stop()
                 break
-    res.release()
+    #res.release()
 
 if __name__ == '__main__':
     main()
