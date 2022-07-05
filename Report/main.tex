@@ -211,7 +211,7 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width=7cm, height = 4.5cm]{images/normal2.jpg}
+      \includegraphics[width=7cm, height = 4.5cm]{images/normal.jpg}
       \caption{How we see the path}
       
     \end{subfigure}
@@ -219,7 +219,7 @@ In order to achieve this we will use the \href{https://docs.opencv.org/3.4/da/d9
     \begin{subfigure}[b]{0.4\textwidth}
     \centering
     \captionsetup{justification=centering}
-      \includegraphics[width= 7cm, height = 4.5cm]{images/thres2.jpg}
+      \includegraphics[width= 7cm, height = 4.5cm]{images/thres.jpg}
       \caption{Thresholded path \\}
       
     \end{subfigure}
@@ -289,7 +289,7 @@ Well, it turns out that is rather easy. Ideally, we have a black image and a whi
 We're now able to identify the center of the lane properly. We need now to make our car pursue it. Logically enough, the direction the car is going can be represented by the mean column of the image. Since the frame size is $240 \times 480$, the center of the camera is simply $\frac{480}{2}=240$.\\
 Therefore, the distance between the road center and the camera center represents the radius of curvature in pixels of the lane. If the center of the street is on the right, than it has to curve right, otherwise left. To avoid useless zig-zag movements, if we are too close to the center we just go straight. \\
 Recall that Saetta is powered by motors whose activation is a percentage of the power we want to give to the motors. We determined experimentally that values less than 10\% are bad because the car does not manage to move, while values greater than 60\% are not good because its motors go nuts. 
-Thus, we have to find a function that given the distance in pixel between center of the lane and the center of the camera spits as output the radius of curvature of the street. It is a value more or less between 0.1 and 0.6 that will be add to the current velocity of a side and subtract from the other side. \\
+Thus, we have to find a function that given the distance in pixel between center of the lane and the center of the camera spits as output the speed that have to be added/subtracted to the motor's sides. It is a value more or less between 0.1 and 0.6 that will be add to the current velocity of a side and subtract from the other side. \\
 The function we found seems totally out of the blue, so we are going to explain step by step the reasoning we did to find it.
 Our goal was to find a function whose radius of curvature was decently high even if the distance from the center was small, but not too high when the distance was large. Moreover, since the distance from the center could also be negative, it had to be symmetric wrt the y axis. Something like this:
 
