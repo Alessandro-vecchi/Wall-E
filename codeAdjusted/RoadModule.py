@@ -74,7 +74,7 @@ def smoothed(dist):
 
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture("/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/laneVideo/testReflex.avi")
+    cap = cv2.VideoCapture("/Users/alessandrovecchi/Downloads/percorsoCam.mp4")
 
     initalTrackbarVals = [106, 111, 24, 223]
     utils.initializeTrackbars(initalTrackbarVals)
