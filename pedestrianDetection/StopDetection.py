@@ -1,10 +1,5 @@
 import cv2
-
-<<<<<<< HEAD
-path = r'C:\Users\devin\Desktop\Università\Ai_lab\proj\Cars-repo\cascade.xml' # Cascade's path
-=======
-path = '/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo/codeAdjusted/cascade.xml' # Cascade's path
->>>>>>> a9253be3b2bd0078643ef89fa6e59ef05400a79d
+path = r'cascade.xml' 
 cameraNo = 0
 objectName = 'STOP'
 frameWidth = 640
@@ -53,6 +48,9 @@ while True:
         if area > minArea:
             cv2.rectangle(img, (x,y), (x+w, y+h), color, 3)
             cv2.putText(img, objectName, (x,y-5), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, color, 2)
+            f = 42 * w/4
+            
+            cv2.putText(img, f'Depth: {f}', (x,y-5), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, color, 2)
             roi_color = img[y:y+h, x:x+w]
         
     cv2.imshow("Result", img)
