@@ -20,11 +20,11 @@ while True:
         record +=1
         sleep(0.300)
     if record == 1:
-        img = wC.getImg(True,size=[240,120])
+        img = wC.getImg(True)
         dC.saveData(img,steering)
     elif record == 2:
         dC.saveLog()
         record = 0
 
-    motor.move(throttle,-steering)
+    motor.move(throttle, -steering)
     cv2.waitKey(1)
