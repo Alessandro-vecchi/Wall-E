@@ -12,10 +12,8 @@ in the log file.
 import pandas as pd, numpy as np
 import os, cv2
 import utils, RoadModule as Rm
-from datetime import datetime
 
-global imgList, steeringList
-countFolder = 0
+global centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
 count = 0
 imgList = []
 steeringList = []
@@ -31,27 +29,29 @@ myDirectory = os.path.join(os.getcwd(), 'DataCollected')
 # print(myDirectory)
 
 # CREATE A NEW FOLDER BASED ON THE PREVIOUS FOLDER COUNT
-while os.path.exists(os.path.join(myDirectory,f'IMG{str(countFolder)}')):
+countFolder = 0
+while os.path.exists(os.path.join(myDirectory,f'log_{str(countFolder)}.csv')):
         countFolder += 1
+'''
 newPath = myDirectory +"/IMG"+str(countFolder)
 os.makedirs(newPath)
-
+'''
 
 def saveData(img,steering):
-    global imgList, centerList, distList, smoothDistList, steeringList
+    global centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
 
     RoadCenter, dist, smoothDist, curveAvg, curve = takeValues(img)
     
     centerList.append(RoadCenter)
     distList.append(dist)
-    smoothDistList.append(smoothDist)
+    smoothDistList.append(round(smoothDist, 3))
     curveAvgList.append(curveAvg)
     curveEstList.append(curve)
     steeringList.append(steering)
 
 # SAVE LOG FILE WHEN THE SESSION ENDS
 def saveLog():
-    global imgList, centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
+    global centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
     rawData = {
                "RoadCenter": centerList, 
                 "Distance": distList, 
@@ -61,7 +61,7 @@ def saveLog():
                 'Steering': steeringList,
                 }
     df = pd.DataFrame(rawData)
-    df.to_csv(os.path.join(myDirectory,f'log_{str(countFolder)}.csv'), index=False, header=False)
+    df.to_csv(os.path.join(myDirectory,f'log_{str(countFolder)}.csv'), index=True, header=True)
     print('Log Saved')
     print('Total Samples:', len(df))
 
@@ -72,11 +72,11 @@ def takeValues(img):
     imgThres = utils.thresholding(img)
 
     # Warping
-    (hT, wT, points) = (img.shape[:2], np.float32([(106, 111), (480-106, 111),(24 ,223), (480-24, 223)]))
+    (hT, wT), points = (img.shape[:2], np.float32([(106, 111), (480-106, 111),(24 ,223), (480-24, 223)]))
     imgWarp = utils.warpImg(imgThres,points,wT,hT)
 
     # Finding center of the road
-    RoadCenter, _ = utils.getHistogram(imgWarp,display=False,minPer=0.5,region=4)
+    RoadCenter = utils.getHistogram(imgWarp,display=False,minPer=0.5,region=4)
 
     imgCenter = 240
     # Distance from the center of the camera
@@ -84,7 +84,7 @@ def takeValues(img):
     smoothDist = Rm.smoothed(dist)
 
     # Estimate curve method 2
-    curveAveragePoint, _ = utils.getHistogram(imgWarp, display=False, minPer=0.9)
+    curveAveragePoint = utils.getHistogram(imgWarp, display=False, minPer=0.9)
     curveRaw = curveAveragePoint - RoadCenter
  
     # Averaging
@@ -97,10 +97,21 @@ def takeValues(img):
 
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture(1)
-    for x in range(10):
+    cap = cv2.VideoCapture(r"/Users/alessandrovecchi/Desktop/AI_Lab/computerVision/AI_lab_project/Cars-repo-1/Videos/percorsoCam.mp4")
+    # Check if camera opened successfully
+
+    if (cap.isOpened()== False):
+        print("Error opening video stream or file")
+
+    for x in range(30):
         _, img = cap.read()
-        saveData(img, 0.5)
-        cv2.waitKey(1)
-        cv2.imshow("Image", img)
+        if _:
+            img = img[150:-12] # crop
+            img = cv2.resize(img,(480, 240))
+            
+            saveData(img, 0.5)
+            cv2.waitKey(1)
+            cv2.imshow("Image", img)
+        else: 
+            print("hi")
     saveLog()
