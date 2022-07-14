@@ -6,7 +6,7 @@ import cv2
 from time import sleep
 
 
-maxThrottle = 0.25
+maxThrottle = 0.2
 motor = mM.Motor(2,3,4,16,20,21)
 
 record = 0
@@ -17,7 +17,7 @@ while True:
     throttle = joyVal['o']*maxThrottle
     if joyVal['share'] == 1:
         if record == 0: print('Recording Started ...')
-        record +=1
+        record += 1
         sleep(0.300)
     if record == 1:
         img = wC.getImg(False)

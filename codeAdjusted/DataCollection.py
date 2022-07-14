@@ -35,7 +35,6 @@ def saveData(img,steering):
     global centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
 
     RoadCenter, dist, smoothDist, curveAvg, curve = takeValues(img)
-    print(type(smoothDist), type(curve))
     centerList.append(RoadCenter)
     distList.append(dist)
     smoothDistList.append(smoothDist)
