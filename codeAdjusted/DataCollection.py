@@ -14,8 +14,6 @@ import os, cv2
 import utils, RoadModule as Rm
 
 global centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
-count = 0
-imgList = []
 steeringList = []
 distList = []
 smoothDistList = []
@@ -28,23 +26,19 @@ curveEstList = []
 myDirectory = os.path.join(os.getcwd(), 'DataCollected')
 # print(myDirectory)
 
-# CREATE A NEW FOLDER BASED ON THE PREVIOUS FOLDER COUNT
+# COUNT CSV files
 countFolder = 0
 while os.path.exists(os.path.join(myDirectory,f'log_{str(countFolder)}.csv')):
         countFolder += 1
-'''
-newPath = myDirectory +"/IMG"+str(countFolder)
-os.makedirs(newPath)
-'''
 
 def saveData(img,steering):
     global centerList, distList, smoothDistList, curveAvgList, curveEstList, steeringList
 
     RoadCenter, dist, smoothDist, curveAvg, curve = takeValues(img)
-    
+    print(type(smoothDist), type(curve))
     centerList.append(RoadCenter)
     distList.append(dist)
-    smoothDistList.append(round(smoothDist, 3))
+    smoothDistList.append(smoothDist)
     curveAvgList.append(curveAvg)
     curveEstList.append(curve)
     steeringList.append(steering)
@@ -55,13 +49,13 @@ def saveLog():
     rawData = {
                "RoadCenter": centerList, 
                 "Distance": distList, 
-                "Motors Power": smoothDistList,
+                "Motors' Power": smoothDistList,
                 "Curve Average": curveAvgList,
-                "Curve M2" : curveEstList,
+                "Motors' Power 2" : curveEstList,
                 'Steering': steeringList,
                 }
     df = pd.DataFrame(rawData)
-    df.to_csv(os.path.join(myDirectory,f'log_{str(countFolder)}.csv'), index=True, header=True)
+    df.to_csv(os.path.join(myDirectory,f'log_{str(countFolder)}.csv'), index=False, header=True)
     print('Log Saved')
     print('Total Samples:', len(df))
 
@@ -91,9 +85,12 @@ def takeValues(img):
     curveList.append(curveRaw)
     if len(curveList)>10:
         curveList.pop(0)
-    curve = int(np.mean(curveList))
+    curve = int(np.mean(curveList))/100
+    if curve>1: curve == 1
+    if curve<-1: curve == -1
  
-    return RoadCenter, dist, smoothDist, curveAveragePoint, curve
+ 
+    return RoadCenter, dist, round(smoothDist, 3), curveAveragePoint, curve
 
 
 if __name__ == '__main__':
@@ -113,5 +110,5 @@ if __name__ == '__main__':
             cv2.waitKey(1)
             cv2.imshow("Image", img)
         else: 
-            print("hi")
+            print("Frame not captured properly")
     saveLog()
