@@ -20,7 +20,7 @@ while True:
         record +=1
         sleep(0.300)
     if record == 1:
-        img = wC.getImg(True)
+        img = wC.getImg(False)
         dC.saveData(img,steering)
     elif record == 2:
         dC.saveLog()
