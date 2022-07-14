@@ -14,7 +14,18 @@ controller.init()
 buttons = {'x': 0, 'o': 0, 't': 0, 's': 0,
            'L1': 0, 'R1': 0, 'L2': 0, 'R2': 0,
            'share': 0, 'options': 0,
-           'axis1': 0., 'axis2': 0., 'axis3': 0., 'axis4': 0.}
+           'axis0': 0., 'axis1': 0., 'axis2': 0., 'axis3': 0.}
+# PS4 controller pygame2
+# LEFT STICK:
+# Left -> Right   - Axis 0
+# Up   -> Down    - Axis 1
+# RIGHT STICK:
+# Left -> Right   - Axis 2
+# Up   -> Down    - Axis 3
+# LEFT TRIGGER:
+# Out -> In   - Axis 5
+# RIGHT TRIGGER:
+# Out -> In   - Axis 4
 axiss = [0., 0., 0., 0., 0., 0.]
 
 
@@ -22,21 +33,21 @@ def getJS(name=''):
     global buttons
     # retrieve any events ...
     for event in pygame.event.get():  # Analog Sticks
-        if event.type == pygame.JOYAXISMOTION:
+        if event.type == pygame.JOYAXISMOTION: # When sticks are moved
             axiss[event.axis] = round(event.value, 2)
-        elif event.type == pygame.JOYBUTTONDOWN:  # When button pressed
+        elif event.type == pygame.JOYBUTTONDOWN:  # When button pressed, its value in the dictionary is updated to 1
             # print(event.dict, event.joy, event.button, 'PRESSED')
             for x, (key, val) in enumerate(buttons.items()):
                 if x < 10:
                     if controller.get_button(x): buttons[key] = 1
-        elif event.type == pygame.JOYBUTTONUP:  # When button released
+        elif event.type == pygame.JOYBUTTONUP:  # When button released, its value it's again 0
             # print(event.dict, event.joy, event.button, 'released')
             for x, (key, val) in enumerate(buttons.items()):
                 if x < 10:
                     if event.button == x: buttons[key] = 0
 
-    # to remove element 2 since axis numbers are 0 1 3 4
-    buttons['axis1'], buttons['axis2'], buttons['axis3'], buttons['axis4'] = [axiss[0], axiss[1], axiss[3], axiss[4]]
+    # axis numbers are 0 1 2 3
+    buttons['axis0'], buttons['axis1'], buttons['axis2'], buttons['axis3'] = [axiss[0], axiss[1], axiss[2], axiss[3]]
     if name == '':
         return buttons
     else:

@@ -29,13 +29,14 @@ def trip():
             
             img = img[150:-12] # crop
             img = cv2.resize(img,(480,240))
+
             perceivedW = utils.stopDetector(img,'Up2/codeAdjusted/cascade.xml', 1900)
             count_nyStop[bool(perceivedW)] += 1
-            print(count_nyStop)
+            #print(count_nyStop)
             if count_nyStop[1] > 7:
                 count_nyStop = [0,0]
                 distance3D = utils.distance_to_camera(perceivedW)
-                print(distance3D)
+                #print(distance3D)
                 if 27 < distance3D < 40: # in cm
                     motor.move(0.2, 0, 0.3)
                     motor.stop(2)
