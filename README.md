@@ -45,6 +45,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -81,7 +82,22 @@ https://github.com/alessandro-vecchi/Wall-E/assets/76568209/e942ceaf-0e27-458b-a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- USAGE EXAMPLES -->
+## Usage
 
+Refer back to the report.pdf file.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Add Badges
+- [x] Add back to top links
+- [ ] Add Usage
+- [ ] Add Changelog
+- [ ] Add Getting Started
+      
 <!-- LICENSE -->
 ## License
 
