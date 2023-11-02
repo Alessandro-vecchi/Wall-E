@@ -94,9 +94,12 @@ Refer back to the report.pdf file.
 
 - [x] Add Badges
 - [x] Add back to top links
+- [x] Add Video
+- [x] Add License 
+- [x] Add Contact
 - [ ] Add Usage
-- [ ] Add Changelog
 - [ ] Add Getting Started
+- [ ] Add Changelog
       
 <!-- LICENSE -->
 ## License
