@@ -85,6 +85,24 @@ https://github.com/alessandro-vecchi/Wall-E/assets/76568209/e942ceaf-0e27-458b-a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Alessandro Vecchi - alessandro.vecchi66@gmail.com
+
+Project Link: [https://github.com/Alessandro-vecchi/cars-repo](https://github.com/Alessandro-vecchi/cars-repo)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
