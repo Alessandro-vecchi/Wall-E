@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -65,8 +66,51 @@ The project is about a mini-autonomous vehicle that uses computer vision to driv
 
 While this is a demo of the model working:
 
-<video src="assets/76568209/e942ceaf-0e27-458b-a2f2-76ba2d496209" >
+https://github.com/alessandro-vecchi/Wall-E/assets/76568209/e942ceaf-0e27-458b-a2f2-76ba2d496209
+<!-- 
+
 <div align="center">
-  <video src="myvideo.mp4" width="400" />
+  <video src="media/video/giro.mp4" width="400" />
 </div>
+-->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+* [![Python][Python]][Python-url]
+* [![OpenCV][OpenCV]][OpenCV-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/Alessandro-vecchi/cars-repo/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
+[forks-url]: https://github.com/Alessandro-vecchi/cars-repo/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
+[stars-url]: https://github.com/Alessandro-vecchi/cars-repo/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
+[issues-url]: https://github.com/Alessandro-vecchi/cars-repo/issues
+
+[license-shield]: https://img.shields.io/github/license/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
+[license-url]: https://github.com/Alessandro-vecchi/cars-repo/blob/master/LICENSE.txt
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/alessandro-v-6711
+
+[product-screenshot]: images/screenshot.png
+[Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Python-url]: https://python.org/
+
+[OpenCV]: https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white
+[OpenCV-url]: https://opencv.org/
+
+
 
