@@ -13,12 +13,11 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Wall-E
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/alessandro-vecchi/Cars-repo">
-    <img src="https://static.wikia.nocookie.net/wall-epidea/images/7/70/Walle3.png/revision/latest?cb=20101120142558" alt="Logo" width="80" height="80">
+    <img src="https://static.wikia.nocookie.net/wall-epidea/images/7/70/Walle3.png/revision/latest?cb=20101120142558" alt="Logo" width="200">
   </a>
 
   <h3 align="center">Wall-E</h3>
@@ -58,6 +57,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Built a mini-autonomous vehicle that computes the trajectory inside a given path using Raspberry PI4 and performs STOP detection.
+The project is about a mini-autonomous vehicle that uses computer vision to drive through a built path. Moreover, it recognizes the 3D-printed STOP signal and act accordingly. Raspberry PI4 constitutes the brain of the robot. The followings are the main components of the robot:
 
-<img src="media/images/walle_description.png" alt="Logo" width="80" height="80">
+<div align="center">
+  <img src="media/images/walle_description.png" alt="Wall-e description" width="80%">
+</div>
+
+While this is a demo of the model working:
+
+<video src="assets/76568209/e942ceaf-0e27-458b-a2f2-76ba2d496209" >
+<div align="center">
+  <video src="myvideo.mp4" width="400" />
+</div>
+
