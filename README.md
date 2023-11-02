@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/alessandro-vecchi/Cars-repo">
+  <a href="https://github.com/alessandro-vecchi/Wall-E">
     <img src="https://static.wikia.nocookie.net/wall-epidea/images/7/70/Walle3.png/revision/latest?cb=20101120142558" alt="Logo" width="200">
   </a>
 
@@ -99,26 +99,26 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Alessandro Vecchi - alessandro.vecchi66@gmail.com
 
-Project Link: [https://github.com/Alessandro-vecchi/cars-repo](https://github.com/Alessandro-vecchi/cars-repo)
+Project Link: [https://github.com/Alessandro-vecchi/Wall-E](https://github.com/Alessandro-vecchi/Wall-E)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/Alessandro-vecchi/cars-repo/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/Alessandro-vecchi/Wall-E.svg?style=for-the-badge
+[contributors-url]: https://github.com/Alessandro-vecchi/Wall-E/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
-[forks-url]: https://github.com/Alessandro-vecchi/cars-repo/network/members
+[forks-shield]: https://img.shields.io/github/forks/Alessandro-vecchi/Wall-E.svg?style=for-the-badge
+[forks-url]: https://github.com/Alessandro-vecchi/Wall-E/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
-[stars-url]: https://github.com/Alessandro-vecchi/cars-repo/stargazers
+[stars-shield]: https://img.shields.io/github/stars/Alessandro-vecchi/Wall-E.svg?style=for-the-badge
+[stars-url]: https://github.com/Alessandro-vecchi/Wall-E/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
-[issues-url]: https://github.com/Alessandro-vecchi/cars-repo/issues
+[issues-shield]: https://img.shields.io/github/issues/Alessandro-vecchi/Wall-E.svg?style=for-the-badge
+[issues-url]: https://github.com/Alessandro-vecchi/Wall-E/issues
 
-[license-shield]: https://img.shields.io/github/license/Alessandro-vecchi/cars-repo.svg?style=for-the-badge
-[license-url]: https://github.com/Alessandro-vecchi/cars-repo/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/Alessandro-vecchi/Wall-E.svg?style=for-the-badge
+[license-url]: https://github.com/Alessandro-vecchi/Wall-E/blob/master/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alessandro-v-6711
