@@ -120,7 +120,10 @@ Project Link: [https://github.com/Alessandro-vecchi/Wall-E](https://github.com/A
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+-->
 [contributors-shield]: https://img.shields.io/github/contributors/Alessandro-vecchi/Wall-E.svg?style=for-the-badge
 [contributors-url]: https://github.com/Alessandro-vecchi/Wall-E/graphs/contributors
 
