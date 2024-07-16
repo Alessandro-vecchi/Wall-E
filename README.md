@@ -113,6 +113,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
+Francesco Danese - francescodanese01@gmail.com
 Alessandro Vecchi - alessandro.vecchi66@gmail.com
 
 Project Link: [https://github.com/Alessandro-vecchi/Wall-E](https://github.com/Alessandro-vecchi/Wall-E)
