@@ -140,7 +140,7 @@ Project Link: [https://github.com/Alessandro-vecchi/Wall-E](https://github.com/A
 [license-url]: https://github.com/Alessandro-vecchi/Wall-E/blob/master/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/alessandro-v-6711
+[linkedin-url]: https://www.linkedin.com/in/francesco-danese-707603251/
 
 [product-screenshot]: images/screenshot.png
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
